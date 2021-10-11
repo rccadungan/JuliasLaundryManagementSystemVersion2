@@ -19,7 +19,7 @@ class CreateAudittrailTable extends Migration
             $table->string('audit_user_id', 20)->nullable(false);
             $table->dateTime('audit_date')->nullable(false);
             $table->text('audit_remarks')->nullable(false);
-            $table->string('audit_date', 50)->nullable(false);
+            $table->string('audit_comp_name', 50)->nullable(false);
             $table->timestamps();
         });
     }
