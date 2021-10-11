@@ -22,7 +22,7 @@ class CreateBranchesTable extends Migration
             $table->decimal('start_custno',  $precision = 18, $scale = 0)->nullable(false);
             $table->decimal('start_softno',  $precision = 18, $scale = 0)->nullable(false);
             $table->foreignId('start_pmtid')->constrained('payments');
-            $table->foreignId('start_cmid')->constrained('credit_memo');
+            $table->foreignId('start_cmid')->constrained('credit_memos');
             $table->timestamps();
         });
     }

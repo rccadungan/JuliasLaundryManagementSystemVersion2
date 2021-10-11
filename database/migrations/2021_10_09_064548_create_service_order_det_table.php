@@ -13,7 +13,7 @@ class CreateServiceOrderDetTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_order_det', function (Blueprint $table) {
+        Schema::create('service_order_details', function (Blueprint $table) {
             $table->id();
             $table->foreignId('so_id')->constrained('service_types');
             $table->foreignId('so_tos_id')->constrained('service_types');
@@ -35,6 +35,6 @@ class CreateServiceOrderDetTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_order_det');
+        Schema::dropIfExists('service_order_details');
     }
 }

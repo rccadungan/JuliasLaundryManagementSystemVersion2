@@ -15,7 +15,7 @@ class CreateSoAdjustmentsTable extends Migration
     {
         Schema::create('so_adjustments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('so_id')->constrained('service_order');
+            $table->foreignId('so_id')->constrained('service_orders');
             $table->decimal('amount', $precision = 8, $scale = 2)->nullable(false);
             $table->string('adj_desc', 100)->nullable(false);
             $table->foreignId('user_id')->constrained('users');

@@ -13,7 +13,7 @@ class CreateAudittrailTable extends Migration
      */
     public function up()
     {
-        Schema::create('audittrail', function (Blueprint $table) {
+        Schema::create('audit_trail', function (Blueprint $table) {
             $table->id();
             $table->string('audit_type', 1)->nullable(false);
             $table->string('audit_user_id', 20)->nullable(false);
@@ -30,6 +30,6 @@ class CreateAudittrailTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('audittrail');
+        Schema::dropIfExists('audit_trail');
     }
 }

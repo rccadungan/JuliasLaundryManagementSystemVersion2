@@ -13,7 +13,7 @@ class CreateCashBreakdownTable extends Migration
      */
     public function up()
     {
-        Schema::create('cash_breakdown', function (Blueprint $table) {
+        Schema::create('cash_breakdowns', function (Blueprint $table) {
             $table->id();
             $table->foreignId('eod_posting_id')->constrained('eod_posting');
             $table->decimal('denomination', $precision = 8, $scale = 2)->nullable(false);
@@ -29,6 +29,6 @@ class CreateCashBreakdownTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cash_breakdown');
+        Schema::dropIfExists('cash_breakdowns');
     }
 }

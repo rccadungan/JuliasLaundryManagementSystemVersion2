@@ -13,10 +13,10 @@ class CreateCancelledSoTable extends Migration
      */
     public function up()
     {
-        Schema::create('cancelled_so', function (Blueprint $table) {
+        Schema::create('cancelled_sos', function (Blueprint $table) {
             $table->id();
             $table->dateTime('cancel_date')->nullable(false);
-            $table->foreignId('so_id')->constrained('service_order');
+            $table->foreignId('so_id')->constrained('service_orders');
             $table->foreignId('user_id')->constrained('users');
             $table->string('reason', 50)->nullable(false);
             $table->timestamps();
@@ -30,6 +30,6 @@ class CreateCancelledSoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cancelled_so');
+        Schema::dropIfExists('cancelled_sos');
     }
 }

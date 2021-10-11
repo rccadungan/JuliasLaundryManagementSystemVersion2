@@ -13,7 +13,7 @@ class CreateServiceOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('service_order', function (Blueprint $table) {
+        Schema::create('service_orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id')->constrained('customers');
             $table->dateTime('so_date_printed')->nullable(false);
@@ -35,6 +35,6 @@ class CreateServiceOrderTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('service_order');
+        Schema::dropIfExists('service_orders');
     }
 }

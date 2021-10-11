@@ -13,10 +13,10 @@ class CreateCreditMemoTable extends Migration
      */
     public function up()
     {
-        Schema::create('credit_memo', function (Blueprint $table) {
+        Schema::create('credit_memos', function (Blueprint $table) {
             $table->id();
             $table->dateTime('cm_date')->nullable(false);
-            $table->foreignId('so_id')->constrained('service_order');
+            $table->foreignId('so_id')->constrained('service_orders');
             $table->decimal('amount', $precision = 18, $scale = 2)->nullable(false);
             $table->foreignId('eod_posting_id')->constrained('eod_posting');
             $table->string('cm_desc', 100)->nullable(false);
@@ -32,6 +32,6 @@ class CreateCreditMemoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('credit_memo');
+        Schema::dropIfExists('credit_memos');
     }
 }
