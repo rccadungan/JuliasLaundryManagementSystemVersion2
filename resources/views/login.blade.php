@@ -1,7 +1,7 @@
 @extends('layouts.auth')
 
 @push('css')
-
+<!--Not Working -->
 .gradient-custom {
   /* fallback for old browsers */
   background: #6a11cb;
@@ -21,12 +21,12 @@
 
 
 <section class="bg-image"
-style="background-image: url('https://mdbootstrap.com/img/new/standard/city/041.jpg');
+style="background-image: url('https://i.pinimg.com/originals/41/4c/18/414c18e3cf6a9ba9a5515d4d5d08b297.png');
 height: 100vh">
   <div class="container py-5 h-100ss">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-light text-black" style="border-radius: 1rem;">
+        <div class="card bg-light text-black" style="border-radius: 1rem;"> 
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-5 mt-md-4 pb-5">
@@ -42,8 +42,9 @@ height: 100vh">
               </div>
 
               <div class="form-outline form-black mb-4">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> <!--Not Working -->
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" />
+                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> <!--Not Working -->
               </div>
 
               <button class="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
@@ -61,5 +62,15 @@ height: 100vh">
 @endsection
 
 @push('scripts')
-<!-- js here -->
+<!--Not Working -->
+$(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
 @endpush
