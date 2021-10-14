@@ -34,13 +34,28 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.index') }}"><i class="fas fa-home mr-1" style="color: blue;"></i> Home</a>
+                        <a class="nav-link" href="{{ route('home.index') }}"><i class="fas fa-home mr-1" style="color: #e75480;"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fab fa-wpexplorer" style="color: red;"></i> Menu 1</a>
+                        <a class="nav-link" href="#"><i class="far fa-clipboard" style="color: #e75480;"></i> Orders </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-home mr-1" style="color: pink;"></i> Menu 1</a>
+                        <a class="nav-link" href="#"><i class="far fa-file-alt" style="color: #e75480;"></i> Reports </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-users" style="color: #e75480;"></i> Customers </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-tshirt" style="color: #e75480;"></i> Services </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-columns" style="color: #e75480;"></i> Inventory </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
                     </li>
                 </ul>
             </div>
