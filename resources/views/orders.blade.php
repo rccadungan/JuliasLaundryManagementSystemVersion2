@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    this is home page
+    this is orders page
 @endsection
 
 @push('scripts')

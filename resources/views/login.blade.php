@@ -35,16 +35,21 @@ height: 100vh">
               <p class="text-black-50 mb-5">Sign with your account</p>
 
               <div class="form-outline form-black mb-4">
-                <div class="input-group"> <!--Not Working -->
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
-                  <input type="email" id="typeUsernameX" class="form-control form-control-lg" placeholder="Username" />
+                <div class="input-group">
+                  <select type="email" id="typeUsernameX" class="form-select form-select-lg w-100 p-2 border border-1 border-secondary rounded rounded-2" aria-label="Select Username">
+                    <option selected>Select Username</option>
+                    @foreach($users as $user)
+                      <option value="{{ $user['username'] }}">{{ $user['username'] }}</option>
+                    @endforeach
+                  </select>
                 </div>
               </div>
 
               <div class="form-outline form-black mb-4">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span> <!--Not Working -->
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" />
-                <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span> <!--Not Working -->
+                <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
+                  <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
+                </div>
               </div>
 
               <button class="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
@@ -62,15 +67,17 @@ height: 100vh">
 @endsection
 
 @push('scripts')
-<!--Not Working -->
-$(".toggle-password").click(function() {
+<script>
+  $("#toggle-password").click(function() {
+    var input = $("#typePasswordX");
+    if (input.attr("type") == "password") {
+      $("#toogle-password-icon").attr("class", "fa fa-fw fa-eye-slash");
+      input.attr("type", "text");
+    } else {
+      $("#toogle-password-icon").attr("class", "fa fa-fw fa-eye");
+      input.attr("type", "password");
+    }
+  });
+</script>
 
-$(this).toggleClass("fa-eye fa-eye-slash");
-var input = $($(this).attr("toggle"));
-if (input.attr("type") == "password") {
-  input.attr("type", "text");
-} else {
-  input.attr("type", "password");
-}
-});
 @endpush

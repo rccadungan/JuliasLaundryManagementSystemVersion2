@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    this is home page
+    this is users page
 @endsection
 
 @push('scripts')

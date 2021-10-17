@@ -26,8 +26,10 @@
     </head>
     <body class="antialiased">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{{ route('home.index') }}">Logo</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <a class="navbar-brand" href="{{ route('home.index') }}">
+                <img style="width: 80px;" src="{{ asset('images/logo_min.jpg') }}" />
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -37,25 +39,25 @@
                         <a class="nav-link" href="{{ route('home.index') }}"><i class="fas fa-home mr-1" style="color: #e75480;"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="far fa-clipboard" style="color: #e75480;"></i> Orders </a>
+                        <a class="nav-link" href="{{ route('home.orders') }}"><i class="far fa-clipboard" style="color: #e75480;"></i> Orders </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="far fa-file-alt" style="color: #e75480;"></i> Reports </a>
+                        <a class="nav-link" href="{{ route('home.reports') }}"><i class="far fa-file-alt" style="color: #e75480;"></i> Reports </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-users" style="color: #e75480;"></i> Customers </a>
+                        <a class="nav-link" href="{{ route('home.customers') }}"><i class="fas fa-users" style="color: #e75480;"></i> Customers </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-tshirt" style="color: #e75480;"></i> Services </a>
+                        <a class="nav-link" href="{{ route('home.services') }}"><i class="fas fa-tshirt" style="color: #e75480;"></i> Services </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-columns" style="color: #e75480;"></i> Inventory </a>
+                        <a class="nav-link" href="{{ route('home.inventory') }}"><i class="fas fa-columns" style="color: #e75480;"></i> Inventory </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
+                        <a class="nav-link" href="{{ route('home.audit_trail') }}"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
+                        <a class="nav-link" href="{{ route('home.users') }}"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
                     </li>
                 </ul>
             </div>
