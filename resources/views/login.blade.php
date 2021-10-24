@@ -47,7 +47,7 @@ height: 100vh">
 
               <div class="form-outline form-black mb-4">
                 <input type="password" id="typePasswordX" class="form-control form-control-lg" placeholder="Password" />
-                <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
+                <div id="toggle-password" style="position: absolute; right: 0; margin-top: -35px; margin-right: 60px;">
                   <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
                 </div>
               </div>
