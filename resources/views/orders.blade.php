@@ -7,11 +7,11 @@
 @section('content')
 <form>
   <!-- Order Information Section -->
-  <h5 class="fw-bold mb-2 text-uppercase">Order Information</h2>
+  <h5 class="fw-bold mb-3 text-uppercase"> Order Information </h5>
 
   <!-- Service Order Field -->
   <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="serviceOrderNumber">Service Order No.</label>
       <input type="number" class="form-control" id="serviceOrderNumber" placeholder="Service Order No.">
     </div>
@@ -23,7 +23,8 @@
       <label for="receivedDate">Received Date</label>
       <input type="date" class="form-control" id="receivedDate" placeholder="Received Date">
     </div>
-    <!-- Received Time Field -->
+
+  <!-- Received Time Field -->
     <div class="form-group col-md-6">
       <label for="receivedTime">Time</label>
       <input type="time" class="form-control" id="receivedTime" placeholder="Time">
@@ -36,7 +37,8 @@
       <label for="pickupDate">Pickup Date</label>
       <input type="date" class="form-control" id="pickupDate" placeholder="Pickup Date">
     </div>
-    <!-- Pickup Time Field -->
+
+  <!-- Pickup Time Field -->
     <div class="form-group col-md-6">
       <label for="pickupTime">Time</label>
       <input type="time" class="form-control" id="pickupTime" placeholder="Time">
@@ -44,17 +46,16 @@
   </div>
 
   <!-- Customer Information Section -->
-  <h5 class="fw-bold mb-2 text-uppercase">Customer Information</h2>
+  <h5 class="fw-bold mb-2 text-uppercase">Customer Information</h5>
 
   <!-- Customer Number Field -->
   <div class="form-group col-md-6">
       <label for="customerNumber">Customer No.</label>
       <input type="number" class="form-control" id="customerNumber" placeholder="Customer No.">
-    </div>
   </div>
 
   <!-- Customer Name Field -->
-  <div class="form-group col-md-4">
+  <div class="form-group col-md-6">
       <label for="customerName">Customer Name</label>
       <select id="customerName" class="form-control">
         <option selected>Choose...</option>
@@ -62,8 +63,8 @@
       </select>
     </div>
 
-    <!-- Customer Address Field -->
-    <div class="form-group col-md-4">
+  <!-- Customer Address Field -->
+    <div class="form-group col-md-6">
       <label for="address">Address</label>
       <select id="address" class="form-control">
         <option selected>Choose...</option>
@@ -77,8 +78,9 @@
       <label for="contactNumber">Contact Number</label>
       <input type="number" class="form-control" id="contactNumber" placeholder="Contact Number">
     </div>
+
     <!-- Make Customer VIP Option -->
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="VIP">VIP</label>
       <select id="VIP" class="form-control">
         <option selected>Choose...</option>
@@ -87,15 +89,15 @@
     </div>
 
     <!-- Customer TransactionRemarks Field -->
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="remarks">Remarks</label>
       <input type="textArea" class="form-control" id="remarks" placeholder="Remarks">
     </div>
 
     <!-- Order Details Section -->
-    <h5 class="fw-bold mb-2 text-uppercase">Order Details</h2>
+    <h5 class="fw-bold mb-2 text-uppercase">Order Details</h5>
 
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
     <!-- Add New Item Button -->
     <button type="submit" class="btn btn-primary">Add a New Item</button>
     <!-- Articles Section -->
@@ -109,8 +111,9 @@
       <label for="quantity">Quantity</label>
       <input type="number" class="form-control" id="quantity" placeholder="Quantity">
     </div>
+
     <!-- Order Discount Field -->
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="discount">Discount</label>
       <select id="discount" class="form-control">
         <option selected>Choose...</option>
@@ -119,9 +122,10 @@
     </div>
 
     <!-- Payment Details Section -->
-    <h5 class="fw-bold mb-2 text-uppercase">Payment</h2>
+    <h5 class="fw-bold mb-2 text-uppercase">Payment</h5>
+
     <!-- Payment Option -->
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-12">
       <label for="paymentOption">Payment Option</label>
       <select id="paymentOption" class="form-control">
         <option selected>Choose...</option>
@@ -130,7 +134,7 @@
     </div>
 
     <!-- Payment Channel Option -->
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-12">
       <label for="paymentChannel">Payment Channel</label>
       <select id="paymentChannel" class="form-control">
         <option selected>Choose...</option>
@@ -139,7 +143,7 @@
     </div>
 
     <!-- Enter Amount Field -->
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
       <label for="amount">Amount</label>
       <input type="number" class="form-control" id="amount" placeholder="Amount">
     </div>
