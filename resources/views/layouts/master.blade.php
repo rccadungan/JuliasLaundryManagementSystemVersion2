@@ -50,7 +50,7 @@
                             <a class="dropdown-item" href="#">SOF Inquiry</a>
                             <a class="dropdown-item" href="#">Issue Credit Memo</a>
                             <a class="dropdown-item" href="#">SO Adjustments</a>
-                                        
+                            <a class="dropdown-item" href="#">Release Order</a>  
                         </div>
                     </li>
 
@@ -109,6 +109,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home.audit_trail') }}"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
                     </li>
+
+                    <!-- Users Menu -->
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('home.users') }}"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
                     </li>
