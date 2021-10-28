@@ -9,13 +9,13 @@ class LoginController extends Controller
     public function index() {
         $users = [
             [
-                'username' => "girl_1"
+                'username' => "Girl 1"
             ],
             [
-                'username' => "girl_2"
+                'username' => "Girl 2"
             ],
             [
-                'username' => "girl_3"
+                'username' => "Girl 3"
             ],
         ];
 
