@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    this is customer page
+this is customer page
 @endsection
 
 @push('scripts')

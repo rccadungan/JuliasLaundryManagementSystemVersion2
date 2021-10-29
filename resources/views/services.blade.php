@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    this is services page
+this is services page
 @endsection
 
 @push('scripts')

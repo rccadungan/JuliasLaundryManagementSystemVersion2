@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is annual list of cancelled so page
 @endsection
 
 @push('scripts')

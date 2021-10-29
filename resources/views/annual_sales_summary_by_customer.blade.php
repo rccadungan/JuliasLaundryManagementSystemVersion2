@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is annual sales summary by customer page
 @endsection
 
 @push('scripts')

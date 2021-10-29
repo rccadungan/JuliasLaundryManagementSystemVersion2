@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is transactions page
 @endsection
 
 @push('scripts')

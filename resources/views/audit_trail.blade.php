@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-    this is Audit trail page
+this is Audit trail page
 @endsection
 
 @push('scripts')

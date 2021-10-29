@@ -24,7 +24,7 @@
       <input type="date" class="form-control" id="receivedDate" placeholder="Received Date">
     </div>
 
-    <!-- Received Time Field -->
+  <!-- Received Time Field -->
     <div class="form-group col-md-6">
       <label for="receivedTime">Time</label>
       <input type="time" class="form-control" id="receivedTime" placeholder="Time">
@@ -34,11 +34,11 @@
   <!-- Pickup Date Field -->
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="pickupDate">Pickup Date</label>
+      <label for="pickupDate">Pick up Date</label>
       <input type="date" class="form-control" id="pickupDate" placeholder="Pickup Date">
     </div>
 
-    <!-- Pickup Time Field -->
+  <!-- Pickup Time Field -->
     <div class="form-group col-md-6">
       <label for="pickupTime">Time</label>
       <input type="time" class="form-control" id="pickupTime" placeholder="Time">
@@ -49,51 +49,50 @@
   <h5 class="fw-bold mb-2 text-uppercase">Customer Information</h5>
 
   <!-- Customer Number Field -->
-  <div class="form-group col-md-4">
-    <label for="customerNumber">Customer No.</label>
-    <input type="text" class="form-control" id="customerNumber" placeholder="Customer No.">
+  <div class="form-group col-md-6">
+      <label for="customerNumber">Customer No.</label>
+      <input type="number" class="form-control" id="customerNumber" placeholder="Customer No.">
   </div>
 
   <!-- Customer Name Field -->
-  <div class="form-group col-md-12">
-    <label for="customerName">Customer Name</label>
-    <select id="customerName" class="form-control">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
+  <div class="form-group col-md-6">
+      <label for="customerName">Customer Name</label>
+      <select id="customerName" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
 
   <!-- Customer Address Field -->
-  <div class="form-group col-md-12">
-    <label for="address">Address</label>
-    <select id="address" class="form-control">
-      <option selected>Choose...</option>
-      <option>...</option>
-    </select>
-  </div>
+    <div class="form-group col-md-6">
+      <label for="address">Address</label>
+      <select id="address" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
 
     <!-- Customer Contact Number Field -->
-  <div class="form-row">
-    <div class="form-group col-md-8">
+    <div class="form-row">
+    <div class="form-group col-md-6">
       <label for="contactNumber">Contact Number</label>
       <input type="number" class="form-control" id="contactNumber" placeholder="Contact Number">
     </div>
 
     <!-- Make Customer VIP Option -->
-    <div class="form-group col-md-4">
+    <div class="form-group col-md-6">
       <label for="VIP">VIP</label>
       <select id="VIP" class="form-control">
         <option selected>Choose...</option>
         <option>...</option>
       </select>
     </div>
-  </div>
 
-  <!-- Customer Transaction Remarks Field -->
-  <div class="form-group col-md-12">
-    <label for="remarks">Remarks</label>
-    <textarea class="form-control" id="remarks" rows="5" placeholder="Remarks"></textarea>
-  </div>
+    <!-- Customer TransactionRemarks Field -->
+    <div class="form-group col-md-12">
+      <label for="remarks">Remarks</label>
+      <input type="textArea" class="form-control" id="remarks" placeholder="Remarks">
+    </div>
 
     <!-- Order Details Section -->
     <h5 class="fw-bold mb-2 text-uppercase">Order Details</h5>

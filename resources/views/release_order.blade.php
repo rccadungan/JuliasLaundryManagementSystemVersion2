@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is release order page
 @endsection
 
 @push('scripts')

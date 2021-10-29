@@ -46,11 +46,11 @@
                             <i class="far fa-clipboard" style="color: #e75480;"></i> Orders
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('home.orders') }}">Order Entries</a>
-                            <a class="dropdown-item" href="#">SOF Inquiry</a>
-                            <a class="dropdown-item" href="#">Issue Credit Memo</a>
-                            <a class="dropdown-item" href="#">SO Adjustments</a>
-                            <a class="dropdown-item" href="#">Release Order</a>  
+                            <a class="dropdown-item" href="{{ route('home.orders') }}">Create Order</a>
+                            <a class="dropdown-item" href="{{ route('sof_inquiry') }}">SOF Inquiry</a>
+                            <a class="dropdown-item" href="{{ route('credit_memo') }}">Issue Credit Memo</a>
+                            <a class="dropdown-item" href="{{ route('so_adjustments') }}">SO Adjustments</a>
+                            <a class="dropdown-item" href="{{ route('release_order') }}">Release Order</a>
                         </div>
                     </li>
 
@@ -61,20 +61,20 @@
                         </a>
                         <div class="dropdown-menu">
                             <!-- Daily Reports -->
-                            <a class="dropdown-item" href="{{ route('home.reports') }}">End of Day</a>
+                            <a class="dropdown-item" href="{{ route('end_of_day') }}">End of Day</a> <!-- Not using Reports route-->
                             <!-- Monthly Reports -->
-                            <a class="dropdown-item" href="#">Monthly Sales by SO</a>
-                            <a class="dropdown-item" href="#">Monthly Sales by Customer</a>
-                            <a class="dropdown-item" href="#">Monthly Sales by Item</a>
-                            <a class="dropdown-item" href="#">Monthly Expenses</a>
+                            <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
+                            <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
+                            <a class="dropdown-item" href="{{ route('monthly_sales_by_item') }}">Monthly Sales by Item</a>
+                            <a class="dropdown-item" href="{{ route('monthly_expenses') }}">Monthly Expenses</a>
                             <!-- Annual Reports -->
-                            <a class="dropdown-item" href="#">Annual Sales Summary by Customer</a>
-                            <a class="dropdown-item" href="#">Annual Sales by Customer/Month</a>
-                            <a class="dropdown-item" href="#">Annual Expenses</a>
-                            <a class="dropdown-item" href="#">Annual List of Credit Memos</a>
-                            <a class="dropdown-item" href="#">Annual List of Cancelled SOs</a>
-                            <a class="dropdown-item" href="#">Annual List of SO Adjustments</a>
-                            <a class="dropdown-item" href="#"></a>
+                            <a class="dropdown-item" href="{{ route('annual_sales_summary_by_customer') }}">Annual Sales Summary by Customer</a>
+                            <a class="dropdown-item" href="{{ route('annual_sales_by_customer_month') }}">Annual Sales by Customer/Month</a>
+                            <a class="dropdown-item" href="{{ route('annual_expenses') }}">Annual Expenses</a>
+                            <a class="dropdown-item" href="{{ route('annual_list_of_credit_memo') }}">Annual List of Credit Memos</a>
+                            <a class="dropdown-item" href="{{ route('annual_list_of_cancelled_so') }}">Annual List of Cancelled SOs</a>
+                            <a class="dropdown-item" href="{{ route('annual_list_of_so_adjustments') }}">Annual List of SO Adjustments</a>
+                        
                         </div>
                     </li>
 
@@ -84,8 +84,8 @@
                             <i class="fas fa-users" style="color: #e75480;"></i> Customers
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('home.customers') }}">Manage Customers</a>
-                            <a class="dropdown-item" href="#">View Transactions</a>                
+                            <a class="dropdown-item" href="{{ route('manage_customers') }}">Manage Customers</a> <!-- Not using Customers route-->
+                            <a class="dropdown-item" href="{{ route('transactions') }}">View Transactions</a>                
                         </div>
                     </li>
 
@@ -95,8 +95,8 @@
                             <i class="fas fa-tshirt" style="color: #e75480;"></i> Services
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('home.services') }}">Manage Services</a>
-                            <a class="dropdown-item" href="#">Manage Discounts</a>                
+                            <a class="dropdown-item" href="{{ route('manage_services') }}">Manage Services</a> <!-- Not using Services route-->
+                            <a class="dropdown-item" href="{{ route('manage_discounts') }}">Manage Discounts</a>                
                         </div>
                     </li>
 

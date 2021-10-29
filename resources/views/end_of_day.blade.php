@@ -1,11 +1,12 @@
-@extends('layouts.master')
+<!-- Redundant to Reports blade -->
+@extends('layouts.master') 
 
 @push('css')
 <!-- css here -->
 @endpush
 
 @section('content')
-this is users page
+this is end of day page
 @endsection
 
 @push('scripts')

@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is sof inquiry page
 @endsection
 
 @push('scripts')

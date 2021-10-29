@@ -1,3 +1,4 @@
+<!-- Redundant to Customers blade -->
 @extends('layouts.master')
 
 @push('css')
@@ -5,7 +6,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is manage customers page
 @endsection
 
 @push('scripts')

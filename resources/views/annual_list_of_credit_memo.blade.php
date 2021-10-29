@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-this is users page
+this is annual list of credit memo page
 @endsection
 
 @push('scripts')
