@@ -69,7 +69,7 @@
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="contactNumber">Contact Number</label>
-      <input type="date" class="form-control" id="contactNumber" placeholder="Contact Number">
+      <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number">
     </div>
 
     <!-- Customer VIP Status Field -->
