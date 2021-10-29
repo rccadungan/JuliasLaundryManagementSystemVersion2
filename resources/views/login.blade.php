@@ -17,7 +17,7 @@ height: 100vh">
 
               <div class="row mb-3">
                 <div class="col-sm-4">
-                  <img class="d-block m-auto" style="width: 100%;" alt="Julia's Laundry Logo" src="{{ asset('images/logo_min.jpg') }}" data-holder-rendered="true">
+                  <img class="d-block m-auto" style="width: 100%;" alt="Julia's Laundry Logo" src="{{ asset('images/logo.jpg') }}" data-holder-rendered="true">
                 </div>
                 <div class="col-sm-8 ps-5">
                   <h5 class="fw-bold text-uppercase text-md-left">Julia's Laundry Management System Version 2</h2>
