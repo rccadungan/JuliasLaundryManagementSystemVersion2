@@ -24,7 +24,7 @@ height: 100vh">
                 </div>
               </div>
               
-              <h4 class="text-black-50 mb-6">Sign with your account</h4>
+              <h5 class="text-black-50 mb-6">Sign with your account</h5>
 
               <div class="form-outline form-black mb-4">
                 <div class="input-group">
@@ -38,13 +38,13 @@ height: 100vh">
               </div>
 
               <div class="form-outline form-black mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" />
+                <input type="password" id="typePasswordX" class="form-control w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" />
                 <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
                   <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
                 </div>
               </div>
 
-              <button class="btn btn-outline-dark btn-lg px-5" type="submit">Login</button>
+              <button class="btn btn-outline-dark px-5" type="submit">Login</button>
 
             </div>
 

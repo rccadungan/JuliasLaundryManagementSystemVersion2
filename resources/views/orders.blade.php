@@ -91,7 +91,7 @@
     <!-- Customer TransactionRemarks Field -->
     <div class="form-group col-md-12">
       <label for="remarks">Remarks</label>
-      <input type="textArea" class="form-control" id="remarks" placeholder="Remarks">
+      <textarea class="form-control" class="form-control" id="remarks" placeholder="Remarks" rows="5"></textarea>
     </div>
 
     <!-- Order Details Section -->
