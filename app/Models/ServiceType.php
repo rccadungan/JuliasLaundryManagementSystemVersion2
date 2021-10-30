@@ -11,4 +11,9 @@ class ServiceType extends Model
 
     protected $table = "service_types";
     protected $guarded = [];
+
+    public function discType()
+    {
+        return $this->hasOne(DiscType::class, 'tos_id', 'id');
+    }
 }
