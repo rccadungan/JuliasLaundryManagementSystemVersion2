@@ -23,19 +23,50 @@
                 box-shadow:none !important;
                 outline:0px !important;
             }
+
         </style>
     </head>
     <body class="antialiased">
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <a class="navbar-brand" href="{{ route('home.index') }}">
-                <img style="width: 80px;" src="{{ asset('images/logo_min.jpg') }}" />
-            </a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white" style="display: block; padding-left: 0; padding-right: 0;">
+            <div 
+                style="
+                    width: 100%;
+                    display: block;
+                    padding: 0 20px 0 20px;
+                "
+            >
+                <a class="navbar-brand" href="{{ route('home.index') }}">
+                    <img style="width: 80px;" src="{{ asset('images/logo_min.jpg') }}">
+                </a>
+
+                @auth
+                    <a href="{{ route('login.logout') }}">
+                        <div
+                            style="
+                                display: inline-block;
+                                float: right;
+                                margin-top: 13px;
+                            "
+                        >
+                            <i class="fas fa-user-circle" style="font-size: 27px;"></i>
+                            {{ auth()->user()->user_name }}
+                        </div>
+                    </a>
+                @endAuth
+            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" 
+                style="
+                    width: 100%;
+                    display: block !important;
+                    border-top: 2px solid #999999;
+                    border-bottom: 2px solid #999999;
+                "
+            >
+                <ul class="navbar-nav" style="margin: auto auto;display: flex;align-items: center;justify-content: center;">
 
                     <!-- Orders Menu -->
                     <li class="nav-item">
@@ -96,7 +127,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{{ route('manage_services') }}">Manage Services</a> <!-- Not using Services route-->
-                            <a class="dropdown-item" href="{{ route('manage_discounts') }}">Manage Discounts</a>                
+                            <a class="dropdown-item" href="{{ route('manage_discounts') }}">Manage Discounts</a>               
                         </div>
                     </li>
 

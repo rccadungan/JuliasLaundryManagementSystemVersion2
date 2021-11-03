@@ -14,7 +14,8 @@ height: 100vh">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">
         <div class="card bg-white text-black" style="border-radius: 1rem;"> 
           <div class="card-body p-5 text-center">
-
+            <form method="post" action="{{ route('login.auth') }}">
+              @csrf
               <div class="row mb-3">
                 <div class="col-sm-4">
                   <img class="d-block m-auto" style="width: 100%;" alt="Julia's Laundry Logo" src="{{ asset('images/logo.jpg') }}" data-holder-rendered="true">
@@ -28,26 +29,28 @@ height: 100vh">
 
               <div class="form-outline form-black mb-4">
                 <div class="input-group">
-                  <select type="email" id="typeUsernameX" class="form-select form-select-lg w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" aria-label="Select Username">
+                  <select name="username" type="email" id="typeUsernameX" class="form-select form-select-lg w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" aria-label="Select Username" required>
                     <option selected>Select Username</option>
                     @foreach($users as $user)
-                      <option value="{{ $user['username'] }}">{{ $user['username'] }}</option>
+                      <option value="{{ $user['user_name'] }}">{{ $user['user_name'] }}</option>
                     @endforeach
                   </select>
                 </div>
               </div>
 
-              <div class="form-outline form-black mb-4">
-                <input type="password" id="typePasswordX" class="form-control w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" />
+              <div class="form-outline form-black mb-2">
+                <input name="password" type="password" id="typePasswordX" class="form-control w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" required />
                 <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
                   <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
                 </div>
               </div>
 
-              <button class="btn btn-outline-dark px-5" type="submit">Login</button>
+              <div class="text-danger mb-2">
+                {{ $error }}
+              </div>
 
-            </div>
-
+              <button type="submit" class="btn btn-outline-dark px-5" type="submit">Login</button>
+            </form>
           </div>
         </div>
       </div>

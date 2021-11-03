@@ -44,9 +44,12 @@ use App\Http\Controllers\ManageDiscountsController;
 
 Route::middleware(['guest'])->group(function() {
     Route::get('/login', [LoginController::class, 'index'])->name('login.index');
+    Route::post('/login', [LoginController::class, 'auth'])->name('login.auth');
 });
 
-Route::middleware(['guest'])->group(function() {
+Route::middleware(['auth'])->group(function() {
+    Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
+
     Route::get('/', [DashboardController::class, 'index'])->name('home.index');
     Route::get('/orders', [OrdersController::class, 'orders'])->name('home.orders');
     Route::get('/reports', [ReportsController::class, 'reports'])->name('home.reports');
