@@ -7,8 +7,6 @@
 
 @section('content')
 <div class="main">
-  
-  <!-- Actual search box -->
   <div class="form-group has-search" style="width: 50%;margin: 50px auto;">
     <span class="fa fa-search form-control-feedback" 
         style="position: absolute;
