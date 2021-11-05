@@ -84,7 +84,7 @@
       <input type="text" class="form-control" id="vip" placeholder="vip" name="vip" value="{{ $customers[0]->is_vip == 1 ? 'Yes' : 'No' }}" readonly />
     </div>
 
-    <!-- Customer TransactionRemarks Field -->
+    <!-- Customer Transaction Remarks Field -->
     <div class="form-group col-md-12">
       <label for="remarks">Remarks</label>
       <textarea class="form-control" class="form-control" id="remarks" placeholder="Remarks" rows="5" name="remarks" ></textarea>

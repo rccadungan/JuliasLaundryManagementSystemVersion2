@@ -92,7 +92,7 @@
                         </a>
                         <div class="dropdown-menu">
                             <!-- Daily Reports -->
-                            <a class="dropdown-item" href="{{ route('end_of_day') }}">End of Day</a> <!-- Not using Reports route-->
+                            <a class="dropdown-item" href="{{ route('end_of_day') }}">Create End of Day Report</a> <!-- Not using Reports route-->
                             <!-- Monthly Reports -->
                             <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
                             <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
