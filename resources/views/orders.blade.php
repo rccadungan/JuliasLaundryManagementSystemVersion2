@@ -5,7 +5,10 @@
 @endpush
 
 @section('content')
-<form>
+<div id="response">
+</div>
+<form method="post" action="{{ route('orders.post') }}">
+  @csrf
   <!-- Order Information Section -->
   <h5 class="fw-bold mb-3 text-uppercase"> Order Information </h5>
 
@@ -99,7 +102,7 @@
     <br/><br/>
     <!-- Articles Section -->
       <label for="article">Article</label>
-      <select id="article" class="form-control" name="article">
+      <select id="article" class="form-control">
         <option>
           Please select article...
         </option>
@@ -115,13 +118,13 @@
   <div class="form-row mb-5">
     <div class="form-group col-md-6">
       <label for="quantity">Quantity</label>
-      <input type="number" class="form-control" id="quantity" placeholder="Quantity" name="quantity" min="1" />
+      <input type="number" class="form-control" id="quantity" placeholder="Quantity" min="1" />
     </div>
 
     <!-- Order Discount Field -->
     <div class="form-group col-md-6">
       <label for="discount">Discount</label>
-      <select id="discount" class="form-control" name="discount" >
+      <select id="discount" class="form-control" >
       </select>
     </div>
 
@@ -134,7 +137,6 @@
             <th scope="col">Minimum</th>
             <th scope="col">Quantity</th>
             <th scope="col">Discount</th>
-            <th scope="col">Deposit</th>
             <th scope="col">Amount</th> 
           </tr>
         </thead>
@@ -182,12 +184,11 @@
     </div>
 
     <!-- Cancel Button -->
-    <button class="btn btn-danger">Cancel</button>
+    <a href="{{ route('home.orders') }}" class="btn btn-danger">Cancel</a>
     <!-- Save Button -->
-    <button class="btn btn-primary ml-2">Save</button>
+    <button type="submit" class="btn btn-primary ml-2">Save</button>
     <!-- Print Button -->
-    <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
-
+    <a href="#" class="btn btn-warning ml-2" style="background-color: pink;">Print</a>
   </div>
 </form>
 @endsection
@@ -235,13 +236,12 @@
         // totalServiceAmount = totalServiceAmount - discount;
         $('#article-table-body').append(`
           <tr>
-            <td>${serviceType[0].article_name}</td>
-            <td>${serviceType[0].amount}</td>
-            <td>${serviceType[0].min_qty}</td>
-            <td>${$('#quantity').val()}</td>
-            <td>${serviceType[0].disc_type.disc_pct * 100}%</td>
-            <td><input class="form-control" type="number" name="service_type_deposit[]" /></td>
-            <td>${totalServiceAmount}</td>
+            <td><input class="form-control" type="text" name="articles[]" readonly value="${serviceType[0].article_name}" /></td>
+            <td><input class="form-control" type="text" name="unitPrices[]" readonly value="${serviceType[0].amount}" /></td>
+            <td><input class="form-control" type="text" name="minimums[]" readonly value="${serviceType[0].min_qty}" /></td>
+            <td><input class="form-control" type="text" name="quantities[]" readonly value="${$('#quantity').val()}" /></td>
+            <td><input class="form-control" type="text" name="discounts[]" readonly value="${serviceType[0].disc_type.disc_pct * 100}%" /></td>
+            <td><input class="form-control" type="text" name="amounts[]" readonly value="${totalServiceAmount}" /></td>
           </tr>
         `);
       }
@@ -266,6 +266,28 @@
         $('.cash').show();
       }
     });
+
+    let success = `
+      <div class="alert alert-success" role="alert">
+        Create order successful.
+      </div>
+    `;
+
+    let failed = `
+      <div class="alert alert-danger" role="alert">
+        Create order failed.
+      </div>
+    `;
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const save = urlParams.get('save');
+    if (save == '1') {
+      $('#response').html(success);
+    } else if (save == '0') {
+      $('#response').html(failed);
+    }
+
   });
 </script>
 @endpush

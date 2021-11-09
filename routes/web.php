@@ -52,6 +52,8 @@ Route::middleware(['auth'])->group(function() {
 
     Route::get('/', [DashboardController::class, 'index'])->name('home.index');
     Route::get('/orders', [OrdersController::class, 'orders'])->name('home.orders');
+    Route::post('/orders', [OrdersController::class, 'post'])->name('orders.post');
+
     Route::get('/reports', [ReportsController::class, 'reports'])->name('home.reports');
     Route::get('/customers', [CustomersController::class, 'customers'])->name('home.customers');
     Route::get('/services', [ServicesController::class, 'services'])->name('home.services');

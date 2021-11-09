@@ -52,7 +52,12 @@
                                       <tr>
                                           <td><a href="#"></a></td>
                                           <td></td>
-                                          <td></td>
+                                          <td>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-primary ml-2">Send</button>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
+                                          </td>
                                       </tr>
                                   </tbody>
                               </table>
@@ -70,7 +75,12 @@
                                       <tr>
                                           <td><a href="#"></a></td>
                                           <td></td>
-                                          <td></td>
+                                          <td>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-primary ml-2">Send</button>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
+                                          </td>
                                       </tr>
                                   </tbody>
                               </table>
@@ -88,7 +98,12 @@
                                       <tr>
                                           <td><a href="#"></a></td>
                                           <td></td>
-                                          <td></td>
+                                          <td>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-primary ml-2">Send</button>
+                                            <!-- Send Button -->
+                                            <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
+                                          </td>
                                       </tr>
                                   </tbody>
                               </table>

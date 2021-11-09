@@ -18,6 +18,7 @@ class CreateCustomersTable extends Migration
             $table->string('cust_name', 50)->nullable(false);
             $table->string('cust_add', 50)->nullable();
             $table->string('cust_tel', 20)->nullable();
+            $table->string('email', 100)->nullable();
             $table->string('cust_status', 1)->nullable(false);
             $table->boolean('is_vip')->nullable(false);
             $table->dateTime('membership_date')->nullable(false);

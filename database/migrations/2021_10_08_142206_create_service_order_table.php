@@ -16,14 +16,14 @@ class CreateServiceOrderTable extends Migration
         Schema::create('service_orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id')->constrained('customers');
-            $table->dateTime('so_date_printed')->nullable(false);
+            $table->dateTime('so_date_printed')->nullable();
             $table->dateTime('so_date_rcv')->nullable(false);
             $table->dateTime('so_date_pickup')->nullable(false);
             $table->dateTime('so_date_release')->nullable();
             $table->foreignId('user_id')->constrained('users');
-            $table->foreignId('eod_posting_id')->constrained('eod_posting');
+            $table->foreignId('eod_posting_id')->constrained('eod_posting')->nullable();
             $table->string('released_by', 20)->nullable();
-            $table->foreignId('rel_eod_posting_id')->constrained('eod_posting');
+            $table->foreignId('rel_eod_posting_id')->constrained('eod_posting')->nullable();
             $table->timestamps();
         });
     }
