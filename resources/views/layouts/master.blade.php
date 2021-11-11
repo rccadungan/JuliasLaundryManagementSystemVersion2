@@ -62,8 +62,7 @@
                 style="
                     width: 100%;
                     display: block !important;
-                    border-top: 2px solid #999999;
-                    border-bottom: 2px solid #999999;
+                    border-top: 1px solid #999999;
                 "
             >
                 <ul class="navbar-nav" style="margin: auto auto;display: flex;align-items: center;justify-content: center;">

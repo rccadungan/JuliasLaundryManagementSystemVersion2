@@ -6,7 +6,7 @@
 @endpush
 
 @section('content')
-<section class="p-3 mb-3 bg-light" style="background-color: #F3F3F3;">
+<div class="container mt-4">
   <!-- Manage Customer Section -->
   <div class="card mb-4">
         <div class="card-body">
@@ -67,7 +67,7 @@
             </div>
         </div>
     </div>
-</section>
+</div>
 @endsection
 
 @push('scripts')

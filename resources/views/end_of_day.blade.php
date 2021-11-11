@@ -6,7 +6,7 @@
 @endpush
 
 @section('content')
-<section class="p-3 mb-3 bg-light" style="background-color: #F3F3F3;">
+<div class="container mt-4">
   <div class="card mb-4">
     <div class="card-body">
       <form>
@@ -301,11 +301,15 @@
       </form>
     </div>
   </div>
+
+  <div class ="mb-2">
     <!-- Cancel Button -->
     <button class="btn btn-danger">Cancel</button>
     <!-- Save Button -->
     <button class="btn btn-primary ml-2">Finalize EOD</button>
-</section>
+  </div>
+  
+</div>
 @endsection
 
 @push('scripts')

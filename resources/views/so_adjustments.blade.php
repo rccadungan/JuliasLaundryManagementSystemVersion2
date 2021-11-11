@@ -5,7 +5,7 @@
 @endpush
 
 @section('content')
-<section class="p-3 mb-3 bg-light" style="background-color: #F3F3F3;">
+<div class="container mt-4">
   <!-- Service Order Adjustment Details Section -->
   <div class="card mb-4">
     <div class="card-body">
@@ -75,12 +75,16 @@
         </div>
       </form>
     </div>
-    <!-- Cancel Button -->
-    <button type="submit" class="btn btn-danger">Cancel</button>
-    <!-- OK Button -->
-    <button type="submit" class="btn btn-primary ml-2">OK</button>
+
+    <div class ="mb-2">
+      <!-- Cancel Button -->
+      <button type="submit" class="btn btn-danger">Cancel</button>
+      <!-- OK Button -->
+      <button type="submit" class="btn btn-primary ml-2">OK</button>
+    </div>
+    
   </div>
-</section>
+</div>
 @endsection
 
 @push('scripts')
