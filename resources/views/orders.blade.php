@@ -7,7 +7,7 @@
 @section('content')
   <div class="container">
     <div class="card mb-4">
-    <div class="card-body">
+      <div class="card-body">
       <div id="response">
       </div>
       <form method="post" action="{{ route('orders.post') }}">
