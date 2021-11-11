@@ -26,7 +26,7 @@
 
         </style>
     </head>
-    <body class="antialiased">
+    <body class="antialiased" style="background-color: #F3F3F3;">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-white" style="display: block; padding-left: 0; padding-right: 0;">
             <div 
