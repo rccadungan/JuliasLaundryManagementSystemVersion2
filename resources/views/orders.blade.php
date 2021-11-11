@@ -5,6 +5,62 @@
 @endpush
 
 @section('content')
+
+<div id="response">
+</div>
+<form method="post" action="{{ route('orders.post') }}">
+  @csrf
+  <section class="p-3 mb-3 bg-light" style="background-color: #F3F3F3;">
+    <!-- Order Information Section -->
+    <div class="card mb-4">
+      <div class="card-body">
+        <!-- Order Information Section -->
+        <h5 class="fw-bold mb-3 text-uppercase"> Order Information </h5>
+
+        <!-- Service Order Field -->
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="serviceOrderNumber">Service Order No.</label>
+            <input type="text" class="form-control" id="serviceOrderNumber" placeholder="Service Order No." value="{{ $service_order_no }}" name="service_order_no" readonly />    </div>
+          </div>
+        </div>
+
+        <!-- Received Date Field -->
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="receivedDate">Received Date</label>
+            <input type="date" class="form-control" id="receivedDate" placeholder="Received Date " name="received_date" />
+          </div>
+
+          <!-- Received Time Field -->
+          <div class="form-group col-md-5">
+            <label for="receivedTime">Time</label>
+            <input type="time" class="form-control" id="receivedTime" placeholder="Time" name="received_time" />
+          </div>
+        </div>
+
+        <!-- Pickup Date Field -->
+        <div class="form-row">
+          <div class="form-group col-md-5">
+            <label for="pickupDate">Pick up Date</label>
+            <input type="date" class="form-control" id="pickupDate" placeholder="Pickup Date" name="pickup_date" />
+          </div>
+
+          <!-- Pickup Time Field -->
+          <div class="form-group col-md-5">
+            <label for="pickupTime">Time</label>
+            <input type="time" class="form-control" id="pickupTime" placeholder="Time" name="pickup_time" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
 <div id="response">
 </div>
 <form method="post" action="{{ route('orders.post') }}">
