@@ -203,6 +203,27 @@
             </div>
         </div>
 
+        <button id="btn-add-article" class="btn btn-primary float-right">Add Expenses</button>
+        <br/><br/>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="expensesType">Expenses Type</label>
+              <select id="expenseType" class="form-control" name="expense_type">
+                <option selected>Choose...</option>
+                <option value="Soap">Soap</option>
+                <option value="Detergent Powder">Detergent Powder</option>
+                <option value="Fabric Conditioner">Fabric Conditioner</option>
+              </select>
+          </div>
+
+            <!-- Total Expenses Section -->
+            <div class="form-group col-md-6">
+              <label for="amount">Amount</label>
+              <input type="text" class="form-control" id="amount" placeholder="Amount" name="amount" />
+            </div>
+        </div>
+
         <!-- Expenses Type Section -->
         <div class="row">
           <div class="col-12">
@@ -215,16 +236,7 @@
               </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <div class="form-group col-md-12">
-                        <select id="expenseType" class="form-control" name="expense_type">
-                          <option selected>Choose...</option>
-                          <option value="Soap">Soap</option>
-                          <option value="Powder">Powder</option>
-                          <option value="Detergent">Detergent</option>
-                        </select>
-                      </div>
-                    </td>
+                    <td>Detergent Powder</td>
                     <td>150.00</td>
                   </tr>
                 </tbody>

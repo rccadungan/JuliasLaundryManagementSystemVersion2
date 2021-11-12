@@ -45,7 +45,7 @@
 
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-serviceOrderForm" role="tabpanel" aria-labelledby="nav-serviceOrderForm-tab">
-                                        <table class="table" cellspacing="0">
+                                        <table class="table table-bordered" cellspacing="0">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Service Order No.</th>

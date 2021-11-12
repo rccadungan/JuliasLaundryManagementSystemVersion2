@@ -35,7 +35,7 @@
             </div>
         </div>
 
-        <table class="table">
+        <table class="table table-bordered">
           <thead>
             <tr>
               <th scope="col">Service Name</th>
@@ -47,37 +47,19 @@
             </tr>
           </thead>
           <tbody>
+            @foreach ($serviceTypes as $serviceType)
             <tr>
-              <td>DC-Barong(100)</td>
-              <td>100.00</td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Type
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">pc</a>
-                    <a class="dropdown-item" href="#">kg</a>
-                  </div>
-                </div>
-              </td>
-              <td>1</td>
-              <td>
-                <div class="dropdown">
-                  <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Status
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item bg-success text-white" href="#">Active</a>
-                    <a class="dropdown-item bg-danger text-white" href="#">Inactive</a>
-                  </div>
-                </div>
-              </td>
+              <td>{{ $serviceType->article_name }}</td>
+              <td>{{ $serviceType->amount }}</td>
+              <td>kg</td>
+              <td>{{ $serviceType->min_qty }}</td>
+              <td>Active</td>
               <td>
                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                 <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
               </td>
             </tr>
+            @endforeach
           </tbody>
         </table>
       </div>

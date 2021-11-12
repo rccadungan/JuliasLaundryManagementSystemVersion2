@@ -75,7 +75,9 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/annual_list_of_credit_memo', [AnnualListOfCreditMemoController::class, 'annual_list_of_credit_memo'])->name('annual_list_of_credit_memo');
     Route::get('/annual_list_of_cancelled_so', [AnnualListOfCancelledSoController::class, 'annual_list_of_cancelled_so'])->name('annual_list_of_cancelled_so');
     Route::get('/annual_list_of_so_adjustments', [AnnualListOFSoAdjustmentController::class, 'annual_list_of_so_adjustments'])->name('annual_list_of_so_adjustments');
+    
     Route::get('/manage_customers', [ManageCustomersController::class, 'manage_customers'])->name('manage_customers'); /* Redundant to Customers controller */
+
     Route::get('/transactions', [TransactionsController::class, 'transactions'])->name('transactions');
     Route::get('/manage_services', [ManageServicesController::class, 'manage_services'])->name('manage_services'); /* Redundant to Services controller */
     Route::get('/manage_discounts', [ManageDiscountsController::class, 'manage_discounts'])->name('manage_discounts');

@@ -40,7 +40,7 @@
 
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-soAdjustments" role="tabpanel" aria-labelledby="nav-soAdjustments-tab">
-                                    <table class="table" cellspacing="0">
+                                    <table class="table table-bordered" cellspacing="0" >
                                         <thead>
                                             <tr>
                                                 <th scope="col">Service Order No.</th>
@@ -66,7 +66,7 @@
                                 </div>
                                 
                                 <div class="tab-pane fade" id="nav-cancelledSos" role="tabpanel" aria-labelledby="nav-cancelledSos-tab">
-                                    <table class="table" cellspacing="0">
+                                    <table class="table table-bordered" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Service Order No.</th>
@@ -89,7 +89,7 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-orderHistory" role="tabpanel" aria-labelledby="nav-orderHistory-tab">
-                                    <table class="table" cellspacing="0">
+                                    <table class="table table-bordered" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Service Order No.</th>
@@ -116,7 +116,7 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-paymentHistory" role="tabpanel" aria-labelledby="nav-paymentHistory-tab">
-                                    <table class="table" cellspacing="0">
+                                    <table class="table table-bordered" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Service Order No.</th>
@@ -143,7 +143,7 @@
                                 </div>
 
                                 <div class="tab-pane fade" id="nav-creditMemos" role="tabpanel" aria-labelledby="nav-creditMemos-tab">
-                                    <table class="table" cellspacing="0">
+                                    <table class="table table-bordered" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Service Order No.</th>

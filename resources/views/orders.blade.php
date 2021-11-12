@@ -71,6 +71,7 @@
           <div class="form-group col-md-6">
             <label for="customerName">Customer Name</label>
             <select id="customerName" class="form-control" name="customer_name">
+              <option selected>Choose customer...</option>
               @foreach($customers as $customer)
                 <option value="{{ $customer->id }}">
                   {{ $customer->cust_name }}
@@ -156,9 +157,9 @@
           </div>
         </div>
 
-        <div>
+        <div class="form-row">
           <div class="col-md-12">
-            <table class="table">
+            <table class="table table-bordered">
               <thead>
                 <tr>
                   <th scope="col">Article</th>

@@ -36,9 +36,10 @@
         </div>
       </div>
 
-      <table class="table">
+      <table class="table table-bordered">
         <thead>
           <tr>
+            <th scope="col">Service</th>
             <th scope="col">Minimum Qty</th>
             <th scope="col">Discount (%)</th>
             <th scope="col">Actions</th>
@@ -46,6 +47,7 @@
         </thead>
         <tbody>
           <tr>
+            <td></td>
             <td>3</td>
             <td>.10</td>
             <td>
