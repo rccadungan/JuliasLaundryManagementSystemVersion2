@@ -124,7 +124,7 @@
         <div class="form-row">
           <div class="form-group col-md-12">
             <!-- Add New Item Button -->
-            <button id="btn-add-article" class="btn btn-primary float-right">Add a New Item</button>
+            <button id="btn-add-article" class="btn btn-primary float-right">Add New Item</button>
             <br/><br/>
             <!-- Articles Section -->
             <label for="article">Article</label>

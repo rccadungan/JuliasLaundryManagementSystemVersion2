@@ -25,6 +25,15 @@
                     </span>
                     <input type="text" class="form-control" placeholder="Search Customer" style="padding-left: 2.375rem;">
                 </div>  
+
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <!-- Add New Customer Button -->
+                        <button id="btn-add-article" class="btn btn-primary float-right">Add New Customer</button>
+                        <br/><br/>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-12">
                     <table class="table table-bordered">

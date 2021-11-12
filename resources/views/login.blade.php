@@ -25,7 +25,7 @@ height: 100vh">
                 </div>
               </div>
               
-              <p class="font-weight-normal text-black-100 mb-1">Sign with your account</p>
+              <p class="font-weight-normal mb-1">Sign with your account</p>
 
               <div class="form-outline form-black mb-4">
                 <div class="input-group">

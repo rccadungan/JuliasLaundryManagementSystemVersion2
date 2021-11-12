@@ -14,9 +14,11 @@
         <h5 class="font-weight-bold mb-3"> End of Day Report </h5>
 
         <!-- Created at Field -->
-        <div class="form-group col-md-6">
-            <label for="createdAt">Created at</label>
-            <input type="text" class="form-control" id="createdAt" placeholder="Created At" name="created_at" readonly />
+        <div class="form-row">
+          <div class="form-group col-md-6">
+              <label for="createdAt">Created at</label>
+              <input type="text" class="form-control" id="createdAt" placeholder="Created At" name="created_at" readonly />
+          </div>
         </div>
       </form>
     </div>

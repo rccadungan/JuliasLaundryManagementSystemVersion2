@@ -62,15 +62,19 @@
         </div>
 
           <!-- Enter Amount Field -->
-          <div class="form-group col-md-12">
-            <label for="amount">Amount</label>
-            <input type="number" class="form-control" id="amount" placeholder="Amount">
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="amount">Amount</label>
+              <input type="number" class="form-control" id="amount" placeholder="Amount">
+            </div>
           </div>
 
           <!-- Adjustment Details Field -->
-          <div class="form-group col-md-12">
-            <label for="adjustmentDetails">Adjustment Details</label>
-            <textarea class="form-control" class="form-control" id="adjustmentDetails" placeholder="Adjustment Details" rows="5"></textarea>
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="adjustmentDetails">Adjustment Details</label>
+              <textarea class="form-control" class="form-control" id="adjustmentDetails" placeholder="Adjustment Details" rows="5"></textarea>
+            </div>
           </div>
         </div>
       </form>
