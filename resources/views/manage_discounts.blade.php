@@ -46,15 +46,17 @@
           </tr>
         </thead>
         <tbody>
+          @foreach ($discTypes as $discType)
           <tr>
-            <td></td>
-            <td>3</td>
-            <td>.10</td>
+            <td>{{ $discType->tos_id }}</td>
+            <td>{{ $discType->min_qty }}</td>
+            <td>{{ $discType->dis_pct }}</td>
             <td>
                 <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                 <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
             </td>
           </tr>
+          @endforeach
         </tbody>
       </table>
     </div>

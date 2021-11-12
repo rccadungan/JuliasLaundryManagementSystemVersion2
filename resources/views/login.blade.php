@@ -40,7 +40,7 @@ height: 100vh">
 
               <div class="form-outline form-black mb-4">
                 <input name="password" type="password" id="typePasswordX" class="form-control w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" required />
-                <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
+                <div id="toggle-password" style="position: absolute; right: 0; margin-top: -32px; margin-right: 60px;">
                   <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
                 </div>
               </div>
