@@ -11,7 +11,7 @@
     <div class="card-body">
       <form>
         <!-- Release Order Section -->
-        <h5 class="fw-bold mb-3 text-uppercase"> Release Order </h5>
+        <h5 class="font-weight-bold mb-3"> Release Order </h5>
 
         <!-- SOF Field -->
         <div class="form-group col-md-6">
@@ -23,7 +23,7 @@
         </div>
 
         <!-- Customer Information Section -->
-        <h5 class="fw-bold mb-3 text-uppercase"> Service Order Form Status </h5>
+        <h5 class="font-weight-bold mb-3"> Service Order Form Status </h5>
 
         <!-- Amount Paid Field -->
         <div class="form-row">
@@ -48,7 +48,7 @@
     <div class="card-body">
       <form>  
         <!-- Customer Information Section -->
-        <h5 class="fw-bold mb-3 text-uppercase"> Customer Information </h5>
+        <h5 class="font-weight-bold mb-3"> Customer Information </h5>
 
         <!-- Customer Number Field -->
         <div class="form-group col-md-6">
@@ -102,7 +102,7 @@
   <div class="card mb-4">
     <div class="card-body">
       <form>  
-        <h5 class="fw-bold mb-3 text-uppercase"> Release Order Details </h5>
+        <h5 class="font-weight-bold mb-3"> Release Order Details </h5>
 
         <!-- Amount Field -->
         <div class="form-group col-md-6">
@@ -122,11 +122,11 @@
     </div>
   </div>
 
-  <div class ="mb-2">
+  <div class ="mb-2 float-right">
     <!-- Cancel Button -->
     <button type="submit" class="btn btn-danger">Cancel</button>
     <!-- OK Button -->
-    <button type="submit" class="btn btn-primary">OK</button>
+    <button type="submit" class="btn btn-primary ml-2">OK</button>
   </div>
   
 </div>

@@ -11,7 +11,7 @@
         <div class="card-body">
             <form>
                 <!-- Service Order Adjustment Details Section -->
-                <h5 class="fw-bold mb-3 text-uppercase"> SOF Inquiry </h5>
+                <h5 class="font-weight-bold mb-3"> SOF Inquiry </h5>
 
                 <!-- Service Order No. Field -->
                 <div class="form-row">

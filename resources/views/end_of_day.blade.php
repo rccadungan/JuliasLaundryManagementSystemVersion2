@@ -11,7 +11,7 @@
     <div class="card-body">
       <form>
         <!-- Create End of Day Report Section --> 
-        <h5 class="fw-bold mb-3 text"> End of Day Report </h5>
+        <h5 class="font-weight-bold mb-3"> End of Day Report </h5>
 
         <!-- Created at Field -->
         <div class="form-group col-md-6">
@@ -29,7 +29,7 @@
     <div class="card-body">
       <form>
         <!-- Cash Breakdown Section -->
-        <h5 class="fw-bold mb-3 text"> Cash Breakdown </h5>
+        <h5 class="font-weight-bold mb-3"> Cash Breakdown </h5>
 
         <div class="row">
           <div class="col-12">
@@ -130,7 +130,7 @@
     <div class="card-body">
       <form>
         <!-- Payment Section -->
-        <h5 class="fw-bold mb-3 text"> Payment </h5>
+        <h5 class="font-weight-bold mb-3"> Payment </h5>
 
         <!-- Date Today Section -->
         <div class="form-row">
@@ -183,7 +183,7 @@
     <div class="card-body">
       <form>
         <!-- LESS: Expenses Section -->
-        <h5 class="fw-bold mb-3 text"> LESS: Expenses </h5>
+        <h5 class="font-weight-bold mb-3"> LESS: Expenses </h5>
 
         <!-- Date Today Section -->
         <div class="form-row">
@@ -239,7 +239,7 @@
     <div class="card-body">
       <form>
         <!-- LESS: Credit Memo Section -->
-        <h5 class="fw-bold mb-3 text"> LESS: Credit Memos </h5>
+        <h5 class="font-weight-bold mb-3"> LESS: Credit Memos </h5>
 
         <!-- Date Today Section -->
         <div class="form-row">
@@ -290,7 +290,7 @@
     <div class="card-body">
       <form>
         <!-- LESS: Credit Memo Section -->
-        <h5 class="fw-bold mb-3 text"> Income Details </h5>
+        <h5 class="font-weight-bold mb-3"> Income Details </h5>
 
         <h6 class="fw-bold mb-3 text"> Cash Subtotal </h6>
         <h7 class="fw-bold mb-3 text"> Total Payment </h7>
@@ -302,7 +302,7 @@
     </div>
   </div>
 
-  <div class ="mb-2">
+  <div class ="mb-2 float-right">
     <!-- Cancel Button -->
     <button class="btn btn-danger">Cancel</button>
     <!-- Save Button -->

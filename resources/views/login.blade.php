@@ -16,16 +16,16 @@ height: 100vh">
           <div class="card-body p-5 text-center">
             <form method="post" action="{{ route('login.auth') }}">
               @csrf
-              <div class="row mb-3">
+              <div class="row mb-5">
                 <div class="col-sm-4">
                   <img class="d-block m-auto" style="width: 100%;" alt="Julia's Laundry Logo" src="{{ asset('images/logo.jpg') }}" data-holder-rendered="true">
                 </div>
                 <div class="col-sm-8 ps-5">
-                  <h5 class="fw-bold text-uppercase text-md-left">Julia's Laundry Management System Version 2</h2>
+                  <h5 class="font-weight-bold text-md-justified ">Julia's Laundry Management System Version 2</h5>
                 </div>
               </div>
               
-              <h5 class="text-black-50 mb-6">Sign with your account</h5>
+              <p class="font-weight-normal text-black-100 mb-1">Sign with your account</p>
 
               <div class="form-outline form-black mb-4">
                 <div class="input-group">
@@ -38,7 +38,7 @@ height: 100vh">
                 </div>
               </div>
 
-              <div class="form-outline form-black mb-2">
+              <div class="form-outline form-black mb-4">
                 <input name="password" type="password" id="typePasswordX" class="form-control w-100 p-2 bg-white border border-1 border-secondary rounded rounded-2" placeholder="Password" required />
                 <div id="toggle-password" style="position: absolute; right: 0; margin-top: -34px; margin-right: 60px;">
                   <span id="toogle-password-icon" class="fa fa-fw fa-eye"></span>
@@ -49,7 +49,7 @@ height: 100vh">
                 {{ $error }}
               </div>
 
-              <button type="submit" class="btn btn-outline-dark px-5" type="submit">Login</button>
+              <button type="submit" class="btn btn-outline-light px-5 text-white font-weight-bold" type="submit" style="background-color:#FF1694;">Login</button>
             </form>
           </div>
         </div>

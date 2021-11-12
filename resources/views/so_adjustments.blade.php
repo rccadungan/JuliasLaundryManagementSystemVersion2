@@ -11,7 +11,7 @@
     <div class="card-body">
       <form>
         <!-- Service Order Adjustment Details Section -->
-        <h5 class="fw-bold mb-3 text-uppercase"> Service Order Adjustment Details </h5>
+        <h5 class="font-weight-bold mb-3"> Service Order Adjustment Details </h5>
 
         <!-- Service Order No. Field -->
         <div class="form-row">
@@ -76,7 +76,7 @@
       </form>
     </div>
 
-    <div class ="mb-2">
+    <div class ="mb-2 float-right">
       <!-- Cancel Button -->
       <button type="submit" class="btn btn-danger">Cancel</button>
       <!-- OK Button -->
