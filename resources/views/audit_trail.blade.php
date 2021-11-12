@@ -36,6 +36,7 @@
                             <th scope="col">Date</th>
                             <th scope="col">Company</th>
                             <th scope="col">Remarks</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -45,6 +46,10 @@
                             <td>10/1/2021 7:29:30</td>
                             <td>Julia's Laundry and Dry Cleaning</td>
                             <td>Cashier for today</td>
+                            <td>
+                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                            </td>
                         </tr>
                         </tbody>
                     </table>

@@ -28,17 +28,30 @@
         </div>  
       </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-12">
+            <!-- Add New Customer Button -->
+            <button id="btn-add-article" class="btn btn-primary float-right">Add New Discounts</button>
+            <br/><br/>
+        </div>
+      </div>
+
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Minimum Qty</th>
             <th scope="col">Discount (%)</th>
+            <th scope="col">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>3</td>
             <td>.10</td>
+            <td>
+                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+            </td>
           </tr>
         </tbody>
       </table>

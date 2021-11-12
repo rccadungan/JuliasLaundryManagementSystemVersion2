@@ -27,6 +27,14 @@
           </div>  
         </div>
 
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <!-- Add New Customer Button -->
+                <button id="btn-add-article" class="btn btn-primary float-right">Add New Services</button>
+                <br/><br/>
+            </div>
+        </div>
+
         <table class="table">
           <thead>
             <tr>
@@ -35,6 +43,7 @@
               <th scope="col">Unit Type</th>
               <th scope="col">Min. Qty</th>
               <th scope="col">[A]ctive/[I]nactive</th>
+              <th scope="col">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -63,6 +72,10 @@
                     <a class="dropdown-item bg-danger text-white" href="#">Inactive</a>
                   </div>
                 </div>
+              </td>
+              <td>
+                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
               </td>
             </tr>
           </tbody>

@@ -49,7 +49,7 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>Bustine Jieber </td>
+                            <td>Justine Dela Paz</td>
                             <td>Blk 15 Lot 12 31st Taguig City</td>
                             <td>09087894562</td>
                             <td>bj@hotmail.com</td>

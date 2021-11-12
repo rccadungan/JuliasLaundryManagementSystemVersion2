@@ -25,6 +25,13 @@
                     <input type="text" class="form-control" placeholder="Search Customer" style="padding-left: 2.375rem;">
                 </div>  
 
+                <div class="form-row">
+                    <div class="form-group col-md-12">
+                        <!-- Add New Customer Button -->
+                        <button id="btn-add-article" class="btn btn-primary float-right">Add New Inventory</button>
+                        <br/><br/>
+                    </div>
+                </div>
 
                 <div class="row">
                     <div class="col-12">
@@ -38,6 +45,7 @@
                             <th scope="col">Item</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Qty</th>
+                            <th scope="col">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -49,6 +57,10 @@
                             <td>WDF-Assorted Regular</td>
                             <td>99.00</td>
                             <td>3</td>
+                            <td>
+                                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                            </td>
                         </tr>
                         </tbody>
                     </table>
