@@ -54,9 +54,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($serviceOrders as $serviceOrder)
                                                 <tr>
-                                                    <td><a href="#"></a></td>
-                                                    <td></td>
+                                                    <td>{{ $serviceOrder->id }}</td>
+                                                    <td>{{ $serviceOrder->created_at }}</td>
                                                     <td>
                                                         <!-- Send Button -->
                                                         <button class="btn btn-primary ml-2">Send</button>
@@ -64,6 +65,7 @@
                                                         <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
@@ -102,9 +104,10 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
+                                                @foreach ($creditMemos as $creditMemo)
                                                 <tr>
-                                                    <td><a href="#"></a></td>
-                                                    <td></td>
+                                                    <td>{{ $creditMemo->id }}</td>
+                                                    <td>{{ $creditMemo->created_at }}</td>
                                                     <td>
                                                         <!-- Send Button -->
                                                         <button class="btn btn-primary ml-2">Send</button>
@@ -112,6 +115,7 @@
                                                         <button class="btn btn-warning ml-2" style="background-color: pink;">Print</button>
                                                     </td>
                                                 </tr>
+                                                @endforeach
                                             </tbody>
                                         </table>
                                     </div>
