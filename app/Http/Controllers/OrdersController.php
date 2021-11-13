@@ -8,7 +8,8 @@ use App\Models\{
     Customer,
     ServiceType,
     ServiceOrder,
-    ServiceOrderDetail
+    ServiceOrderDetail,
+    User
 };
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\{
@@ -23,11 +24,13 @@ class OrdersController extends Controller
         $customers = Customer::all();
         $serviceTypes = ServiceType::with('discType')
             ->get();
+        $users = User::all();
 
         return view('orders', [
             'service_order_no' => $service_order_no,
             'customers' => $customers,
             'serviceTypes' => $serviceTypes,
+            'users' => $users,
         ]);
     }
 

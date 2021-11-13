@@ -14,7 +14,7 @@ class SofInquiryController extends Controller
         $serviceOrders = ServiceOrder::all();
         $creditMemos = CreditMemo::all();
 
-        return view('manage_discounts', [
+        return view('sof_inquiry', [
           'serviceOrders' => $serviceOrders,
           'creditMemos' => $creditMemos,
           

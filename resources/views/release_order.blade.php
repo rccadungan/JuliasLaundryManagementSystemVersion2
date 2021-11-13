@@ -74,12 +74,15 @@
 
         <!-- Customer Address Field -->
         <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="address">Address</label>
-            <select id="address" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+          <div class="form-group col-md-6">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id="customerAddress" placeholder="Address" name="address" value="{{ $customers[0]->cust_add }}" readonly />
+          </div>
+
+          <!-- Customer Address Field -->
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
           </div>
         </div>
 
@@ -87,16 +90,13 @@
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="contactNumber">Contact Number</label>
-            <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number">
+            <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number" name="contact_number" value="{{ $customers[0]->cust_tel }}" readonly />
           </div>
 
           <!-- Customer VIP Status Field -->
           <div class="form-group col-md-6">
             <label for="vip">VIP</label>
-            <select id="vip" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+            <input type="text" class="form-control" id="vip" placeholder="vip" name="vip" value="{{ $customers[0]->is_vip == 1 ? 'Yes' : 'No' }}" readonly />
           </div>
         </div>
       </form>

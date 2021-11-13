@@ -21,29 +21,48 @@
 
     <!-- Received Date Field -->
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="receivedDate">Received Date</label>
         <input type="date" class="form-control" id="receivedDate" placeholder="Received Date " name="received_date" />
       </div>
 
       <!-- Received Time Field -->
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="receivedTime">Time</label>
         <input type="time" class="form-control" id="receivedTime" placeholder="Time" name="received_time" />
       </div>
-    </div>
+
+     <!-- Received By Field -->
+     <div class="form-group col-md-4">
+        <label for="receivedBy">Received By</label>
+        <select id="receivedBy" class="form-control" name="received_by">
+          <option selected>Choose employee...</option>
+          @foreach($users as $user)
+            <option value="{{ $user->user_name }}">
+              {{ $user->user_name }}
+            </option>
+          @endforeach
+        </select>
+      </div> 
+    </div> 
 
     <!-- Pickup Date Field -->
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="pickupDate">Pick up Date</label>
         <input type="date" class="form-control" id="pickupDate" placeholder="Pickup Date" name="pickup_date" />
       </div>
 
       <!-- Pickup Time Field -->
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-4">
         <label for="pickupTime">Time</label>
         <input type="time" class="form-control" id="pickupTime" placeholder="Time" name="pickup_time" />
+      </div>
+
+      <!-- Pickup By Field -->
+      <div class="form-group col-md-4">
+        <label for="pickupBy">To Be Picked Up By</label>
+        <input type="text" class="form-control" id="pickupBy" placeholder="To Be Picked Up By" name="pickup_by" />
       </div>
     </div>`
 
@@ -74,9 +93,15 @@
 
     <!-- Customer Address Field -->
     <div class="form-row">
-      <div class="form-group col-md-12">
+      <div class="form-group col-md-6">
         <label for="address">Address</label>
         <input type="text" class="form-control" id="customerAddress" placeholder="Address" name="address" value="{{ $customers[0]->cust_add }}" readonly />
+      </div>
+
+      <!-- Customer Address Field -->
+      <div class="form-group col-md-6">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
       </div>
     </div>
 
@@ -148,6 +173,7 @@
               <th scope="col">Article</th>
               <th scope="col">Unit Price</th>
               <th scope="col">Minimum</th>
+              <th scope="col">Unit Type</th>
               <th scope="col">Quantity</th>
               <th scope="col">Discount</th>
               <th scope="col">Amount</th> 
@@ -163,9 +189,17 @@
     <!-- Payment Details Section -->
     <h5 class="font-weight-bold mb-3">Payment</h5>
 
-    <!-- Payment Channel Option -->
+    <!-- Enter Total Amount Field -->
     <div class="form-row mb-3">
       <div class="form-group col-md-12">
+        <label for="totalAmount">Total Amount</label>
+        <input type="number" class="form-control" id="totalAmount" placeholder="Total Amount" name="totalAmount" />
+      </div>
+    </div>
+
+    <!-- Payment Channel Option -->
+    <div class="form-row mb-3">
+      <div class="form-group col-md-6">
         <label for="paymentChannel">Payment Channel</label>
         <select id="paymentChannel" class="form-control" name="payment_channel">
           <option selected>Choose...</option>
@@ -174,11 +208,10 @@
           <option value="cash">Cash</option>
         </select>
       </div>
-    </div>
 
-    <!-- Payment Option -->
-    <div class="form-row mb-3">
-      <div class="form-group col-md-12">
+
+      <!-- Payment Option -->
+      <div class="form-group col-md-6">
         <label for="paymentOption">Payment Option</label>
         <select id="paymentOption" class="form-control" name="payment_option" >
           <option>Choose...</option>
@@ -196,11 +229,18 @@
       </div>
     </div>
 
-    <!-- Enter Amount Field -->
+
+    <!-- Enter Amount Deposit Field -->
     <div class="form-row mb-3">
-      <div class="form-group col-md-12">
-        <label for="amount">Amount</label>
-        <input type="number" class="form-control" id="amount" placeholder="Amount" name="amount" />
+      <div class="form-group col-md-6">
+        <label for="amountDeposit">Amount Deposit</label>
+        <input type="number" class="form-control" id="totalAmount" placeholder="Amount Deposit" name="amountDeposit" />
+      </div>
+
+      <!-- Enter Amount Paid Field -->
+      <div class="form-group col-md-6">
+        <label for="amountPaid">Amount Paid</label>
+        <input type="number" class="form-control" id="amountPaid" placeholder="Amount Paid" name="amountPaid" />
       </div>
     </div>
 
