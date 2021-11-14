@@ -71,7 +71,7 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="nav-provisionalReceipt" role="tabpanel" aria-labelledby="nav-provisionalReceipt-tab">
-                                        <table class="table" cellspacing="0">
+                                        <table class="table table-bordered" cellspacing="0">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Provisional Receipt No.</th>
@@ -95,7 +95,7 @@
                                     </div>
 
                                     <div class="tab-pane fade" id="nav-creditMemo" role="tabpanel" aria-labelledby="nav-creditMemo-tab">
-                                        <table class="table" cellspacing="0">
+                                        <table class="table table-bordered" cellspacing="0">
                                             <thead>
                                                 <tr>
                                                     <th scope="col">Credit Memo No.</th>
