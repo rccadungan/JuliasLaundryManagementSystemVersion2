@@ -49,7 +49,7 @@
                                                 <th scope="col">Pickup Date</th>
                                                 <th scope="col">Amount</th>
                                                 <th scope="col">Adjustment Details</th>
-                                                
+                                                <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -60,6 +60,11 @@
                                                 <td>10/10/21 <br>9:00 AM</td>
                                                 <td>132.00</td>
                                                 <td>Pickup date adjusted </td>
+                                                <td>
+                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                </td>
+                                                
                                             </tr>
                                         </tbody>
                                     </table>
@@ -74,6 +79,7 @@
                                                 <th scope="col">Pickup Date</th>
                                                 <th scope="col">Amount</th>
                                                 <th scope="col">Received By</th>
+                                                <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -83,6 +89,10 @@
                                                 <td>10/10/21 <br>9:00 AM</td>
                                                 <td>132.00</td>
                                                 <td>Sarah Lahbati</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -152,6 +162,7 @@
                                                 <th scope="col">Amount</th>
                                                 <th scope="col">Received By</th>
                                                 <th scope="col">Reason</th>
+                                                <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -162,6 +173,10 @@
                                                 <td>132.00</td>
                                                 <td>Sarah Lahbati</td>
                                                 <td>Return Deposit</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
