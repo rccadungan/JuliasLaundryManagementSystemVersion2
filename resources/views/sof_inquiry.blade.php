@@ -16,11 +16,15 @@
                 <!-- Service Order No. Field -->
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                    <label for="customerName">Customer Name</label>
-                    <select id="customerName" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                        <label for="customerName">Customer Name</label>
+                        <select id="customerName" class="form-control" name="customer_name">
+                        <option selected>Choose customer...</option>
+                            @foreach($customers as $customer)
+                                <option value="{{ $customer->id }}">
+                                {{ $customer->cust_name }}
+                                </option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <!-- Service Order No. Field -->
@@ -28,7 +32,11 @@
                     <label for="serviceOrderNo">Service Order No.</label>
                     <select id="serviceOrderNo" class="form-control">
                         <option selected>Choose...</option>
-                        <option>...</option>
+                            @foreach($serviceOrders as $serviceOrder)
+                                <option value="{{ $serviceOrder->id }}">
+                                {{ $serviceOrder->id }}
+                                </option>
+                            @endforeach
                     </select>
                     </div>
 

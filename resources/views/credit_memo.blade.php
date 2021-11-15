@@ -28,7 +28,11 @@
                   <label for="sofNumber">SOF No.</label>
                   <select id="sofNumber" class="form-control">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                      @foreach($serviceOrders as $serviceOrder)
+                        <option value="{{ $serviceOrder->id }}">
+                        {{ $serviceOrder->id }}
+                        </option>
+                      @endforeach
                   </select>
                 </div>
               </div>
@@ -69,7 +73,11 @@
                     <label for="customerNumber">Customer No.</label>
                     <select id="customerNumber" class="form-control">
                       <option selected>Choose...</option>
-                      <option>...</option>
+                      @foreach($customers as $customer)
+                        <option value="{{ $customer->id }}">
+                        {{ $customer->id }}
+                        </option>
+                      @endforeach
                     </select>
                 </div>
 
@@ -78,7 +86,11 @@
                     <label for="customerName">Customer Name</label>
                     <select id="customerName" class="form-control">
                       <option selected>Choose...</option>
-                      <option>...</option>
+                        @foreach($customers as $customer)
+                          <option value="{{ $customer->id }}">
+                          {{ $customer->cust_name }}
+                          </option>
+                        @endforeach
                     </select>
                 </div>
               </div>
@@ -128,7 +140,7 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="amount">Amount</label>
-                    <input type="text" class="form-control" id="amount" placeholder="Amount">
+                    <input type="number" class="form-control" id="amount" placeholder="Amount">
                 </div>
               </div>
 
@@ -136,7 +148,14 @@
               <div class="form-row">
                 <div class="form-group col-md-12">
                   <label for="reason">Reason</label>
-                  <input type="text" class="form-control" id="reason" placeholder="Reason">
+                  <select id="reason" class="form-control">
+                    <option selected>Choose...</option>
+                      @foreach($creditMemos as $creditMemo)
+                        <option value="{{ $creditMemo->id }}">
+                        {{ $creditMemo->cm_desc }}
+                        </option>
+                      @endforeach
+                  </select>
                 </div>
               </div>
             </form>
@@ -162,7 +181,11 @@
             <label for="sofNumber">SOF No.</label>
             <select id="sofNumber" class="form-control">
               <option selected>Choose...</option>
-              <option>...</option>
+                @foreach($serviceOrders as $serviceOrder)
+                  <option value="{{ $serviceOrder->id }}">
+                  {{ $serviceOrder->id }}
+                  </option>
+                @endforeach
             </select>
           </div>
         </div>
