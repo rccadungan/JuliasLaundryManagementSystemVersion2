@@ -93,7 +93,7 @@
                 <!-- Customer Address Field -->
                 <div class="form-group col-md-6">
                   <label for="email">Email</label>
-                  <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
+                  <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->email }}" readonly />
                 </div>
               </div>
 
@@ -145,6 +145,9 @@
       </div>
     </div>
   </div>
+
+
+
 
   <!-- Issue Credit Memo Section -->
   <div class="card mb-4">
@@ -270,7 +273,8 @@
         </div>
       </form>
     </div>
-  </div>
+  </div> 
+  
 
   <div class ="mb-2 float-right">
     <!-- Cancel Button -->
@@ -279,7 +283,7 @@
     <button type="submit" class="btn btn-primary ml-2">OK</button>
   </div>
   
-</div>
+</div> 
 @endsection
 
 @push('scripts')

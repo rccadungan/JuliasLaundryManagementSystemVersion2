@@ -101,7 +101,7 @@
       <!-- Customer Address Field -->
       <div class="form-group col-md-6">
         <label for="email">Email</label>
-        <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
+        <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->email }}" readonly />
       </div>
     </div>
 
@@ -160,7 +160,7 @@
       <!-- Order Discount Field -->
       <div class="form-group col-md-6">
         <label for="discount">Discount</label>
-        <select id="discount" class="form-control" >
+        <select id="discount" class="form-control" readonly>
         </select>
       </div>
     </div>
@@ -193,7 +193,7 @@
     <div class="form-row mb-3">
       <div class="form-group col-md-12">
         <label for="totalAmount">Total Amount</label>
-        <input type="number" class="form-control" id="totalAmount" placeholder="Total Amount" name="totalAmount" />
+        <input type="number" class="form-control" id="totalAmount" placeholder="Total Amount" name="totalAmount" readonly/>
       </div>
     </div>
 
@@ -234,7 +234,7 @@
     <div class="form-row mb-3">
       <div class="form-group col-md-6">
         <label for="amountDeposit">Amount Deposit</label>
-        <input type="number" class="form-control" id="totalAmount" placeholder="Amount Deposit" name="amountDeposit" />
+        <input type="number" class="form-control" id="amountDeposit" placeholder="Amount Deposit" name="amountDeposit" />
       </div>
 
       <!-- Enter Amount Paid Field -->
