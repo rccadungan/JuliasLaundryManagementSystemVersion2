@@ -36,7 +36,7 @@ use App\Http\Controllers\AnnualSalesByCustomerMonthController;
 use App\Http\Controllers\AnnualExpensesController;
 use App\Http\Controllers\AnnualListOfCreditMemoController;
 use App\Http\Controllers\AnnualListOfCancelledSoController;
-use App\Http\Controllers\AnnualListOFSoAdjustmentController;
+use App\Http\Controllers\AnnualListOfSoAdjustmentController;
 use App\Http\Controllers\ManageCustomersController; /* Redundant to Customers controller */
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\ManageServicesController; /* Redundant to Services controller */
