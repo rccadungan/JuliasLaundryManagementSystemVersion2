@@ -9,8 +9,9 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function index() {
-        $users = User::where('user_level', 2)
-            ->get();
+        // $users = User::where('user_level', 2)
+        //     ->get();
+        $users = User::all();
 
         return view('login', [
             'users' => $users,

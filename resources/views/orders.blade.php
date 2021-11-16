@@ -260,6 +260,7 @@
 @push('scripts')
 <script>
   $(document).ready(function() {
+    let totalAmount = 0.00;
     let customers = JSON.parse( '{!! $customers !!}');
     let serviceTypes = JSON.parse( '{!! $serviceTypes !!}');
     $('#customerName').change(function() {
@@ -303,11 +304,14 @@
             <td><input class="form-control" type="text" name="articles[]" readonly value="${serviceType[0].article_name}" /></td>
             <td><input class="form-control" type="text" name="unitPrices[]" readonly value="${serviceType[0].amount}" /></td>
             <td><input class="form-control" type="text" name="minimums[]" readonly value="${serviceType[0].min_qty}" /></td>
+            <td><input class="form-control" type="text" readonly value="KG" /></td>
             <td><input class="form-control" type="text" name="quantities[]" readonly value="${$('#quantity').val()}" /></td>
             <td><input class="form-control" type="text" name="discounts[]" readonly value="${serviceType[0].disc_type.disc_pct * 100}%" /></td>
             <td><input class="form-control" type="text" name="amounts[]" readonly value="${totalServiceAmount}" /></td>
           </tr>
         `);
+        totalAmount += parseFloat(serviceType[0].amount - (serviceType[0].amount * serviceType[0].disc_type.disc_pct));
+        $('#totalAmount').val(totalAmount);
       }
     });
     $('#paymentChannel').change(function(){

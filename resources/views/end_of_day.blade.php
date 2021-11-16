@@ -191,7 +191,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
               <label for="dateToday">Date Today</label>
-              <input type="date" class="form-control" id="dateToday" placeholder="Date Today " name="date_Today" />
+              <input type="date" class="form-control" id="dateToday2" placeholder="Date Today " name="date_Today" />
             </div>
         </div>
 
@@ -259,7 +259,7 @@
         <div class="form-row">
             <div class="form-group col-md-6">
               <label for="dateToday">Date Today</label>
-              <input type="date" class="form-control" id="dateToday" placeholder="Date Today " name="date_Today" />
+              <input type="date" class="form-control" id="dateToday3" placeholder="Date Today " name="date_Today" />
             </div>
         </div>
 

@@ -84,29 +84,31 @@
                         </div>
                     </li>
 
-                    <!-- Reports Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="far fa-file-alt" style="color: #e75480;"></i> Reports
-                        </a>
-                        <div class="dropdown-menu">
-                            <!-- Daily Reports -->
-                            <a class="dropdown-item" href="{{ route('end_of_day') }}">Create End of Day Report</a> <!-- Not using Reports route-->
-                            <!-- Monthly Reports -->
-                            <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
-                            <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
-                            <a class="dropdown-item" href="{{ route('monthly_sales_by_item') }}">Monthly Sales by Item</a>
-                            <a class="dropdown-item" href="{{ route('monthly_expenses') }}">Monthly Expenses</a>
-                            <!-- Annual Reports -->
-                            <a class="dropdown-item" href="{{ route('annual_sales_summary_by_customer') }}">Annual Sales Summary by Customer</a>
-                            <a class="dropdown-item" href="{{ route('annual_sales_by_customer_month') }}">Annual Sales by Customer/Month</a>
-                            <a class="dropdown-item" href="{{ route('annual_expenses') }}">Annual Expenses</a>
-                            <a class="dropdown-item" href="{{ route('annual_list_of_credit_memo') }}">Annual List of Credit Memos</a>
-                            <a class="dropdown-item" href="{{ route('annual_list_of_cancelled_so') }}">Annual List of Cancelled SOs</a>
-                            <a class="dropdown-item" href="{{ route('annual_list_of_so_adjustments') }}">Annual List of SO Adjustments</a>
-                        
-                        </div>
-                    </li>
+                    @if (auth()->user()->user_level == 1)
+                        <!-- Reports Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-alt" style="color: #e75480;"></i> Reports
+                            </a>
+                            <div class="dropdown-menu">
+                                <!-- Daily Reports -->
+                                <a class="dropdown-item" href="{{ route('end_of_day') }}">Create End of Day Report</a> <!-- Not using Reports route-->
+                                <!-- Monthly Reports -->
+                                <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
+                                <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
+                                <a class="dropdown-item" href="{{ route('monthly_sales_by_item') }}">Monthly Sales by Item</a>
+                                <a class="dropdown-item" href="{{ route('monthly_expenses') }}">Monthly Expenses</a>
+                                <!-- Annual Reports -->
+                                <a class="dropdown-item" href="{{ route('annual_sales_summary_by_customer') }}">Annual Sales Summary by Customer</a>
+                                <a class="dropdown-item" href="{{ route('annual_sales_by_customer_month') }}">Annual Sales by Customer/Month</a>
+                                <a class="dropdown-item" href="{{ route('annual_expenses') }}">Annual Expenses</a>
+                                <a class="dropdown-item" href="{{ route('annual_list_of_credit_memo') }}">Annual List of Credit Memos</a>
+                                <a class="dropdown-item" href="{{ route('annual_list_of_cancelled_so') }}">Annual List of Cancelled SOs</a>
+                                <a class="dropdown-item" href="{{ route('annual_list_of_so_adjustments') }}">Annual List of SO Adjustments</a>
+                            
+                            </div>
+                        </li>
+                    @endif
 
                     <!-- Customers Menu -->
                     <li class="nav-item dropdown">

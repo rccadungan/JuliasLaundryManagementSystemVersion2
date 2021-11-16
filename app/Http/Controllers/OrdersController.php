@@ -43,7 +43,7 @@ class OrdersController extends Controller
             $serviceOrder->so_date_rcv = $request->get('received_date');
             $serviceOrder->so_date_pickup = $request->get('pickup_date');
             $serviceOrder->user_id = Auth::user()->id;
-            // $serviceOrder->save();
+            $serviceOrder->save();
 
             $articles = $request->get('articles');
             $unitPrices = $request->get('unitPrices');
@@ -66,7 +66,7 @@ class OrdersController extends Controller
                 $discount = $discounts[$index];
                 $discount = str_replace('%', '', $discount);
                 $serviceOrderDetail->disc_pct = $discount / 100;
-               // $serviceOrderDetail->save();
+                $serviceOrderDetail->save();
             }
 
             $customer = Customer::find($request->get('customer_number'));
