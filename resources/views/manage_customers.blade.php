@@ -28,11 +28,61 @@
 
                 <div class="form-row">
                     <div class="form-group col-md-12">
-                        <!-- Add New Customer Button -->
-                        <button id="btn-add-article" class="btn btn-primary float-right">Add New Customer</button>
-                        <br/><br/>
+                        <!-- Add New Customer Button -->                
+                        <button id="btn-add-customer" type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#form">
+                            Add New Customer
+                        </button>
+                        <br/><br/>  
+                    </div>
+
+                    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="addCustomerInformation" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header border-bottom-0">
+                                    <h5 class="modal-title" id="addCustomerInformation">Enter Customer Information</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form>
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label for="addCustomerName">Customer Name</label>
+                                            <input type="text" class="form-control" id="addCustomerName" aria-describedby="addCustomerNameHelp" placeholder="Enter Customer Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="addAddress">Address</label>
+                                            <input type="text" class="form-control" id="addAddress" placeholder="Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="addContactNo.">Contact No.</label>
+                                            <input type="contactNo." class="form-control" id="addContactNo." placeholder="Contact No.">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="addEmail">Email</label>
+                                            <input type="email" class="form-control" id="addEmail" placeholder="Email">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="addStatus">VIP Status</label>
+                                            <select id="addStatus" class="form-control">
+                                                <option selected>Choose...</option>
+                                                <option>VIP</option>
+                                                <option>Not VIP</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
 
                 <div class="row">
                     <div class="col-12">
@@ -53,19 +103,55 @@
                             <td>Blk 15 Lot 12 31st Taguig City</td>
                             <td>09087894562</td>
                             <td>bj@hotmail.com</td>
+                            <td>VIP</td>
                             <td>
-                                <div class="dropdown">
-                                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        VIP Status
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <a class="dropdown-item" href="#">VIP</a>
-                                        <a class="dropdown-item" href="#">Not VIP</a>
+                            <button id="btn-edit-customer" type="button" class="btn btn-success" data-toggle="modal" data-target="#form1">
+                                <i class="fas fa-edit"></i>
+                            </button>   
+                                <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="addCustomerInformation" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header border-bottom-0">
+                                                <h5 class="modal-title" id="addCustomerInformation">Edit Customer Information</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <form>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="editCustomerName">Customer Name</label>
+                                                        <input type="text" class="form-control" id="editCustomerName" aria-describedby="editCustomerNameHelp" placeholder="Enter Customer Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editAddress">Address</label>
+                                                        <input type="text" class="form-control" id="editAddress" placeholder="Address">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editContactNo.">Contact No.</label>
+                                                        <input type="contactNo." class="form-control" id="editContactNo." placeholder="Contact No.">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="editEmail">Email</label>
+                                                        <input type="email" class="form-control" id="editEmail" placeholder="Email">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="editStatus">VIP Status</label>
+                                                        <select id="editStatus" class="form-control">
+                                                            <option selected>Choose...</option>
+                                                            <option>VIP</option>
+                                                            <option>Not VIP</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="modal-footer border-top-0 d-flex justify-content-center">
+                                                        <button type="submit" class="btn btn-success">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
-                            </td>
-                            <td>
-                            <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
                             <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
                             </td>
                         </tr>

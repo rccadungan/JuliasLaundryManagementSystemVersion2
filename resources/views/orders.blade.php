@@ -251,11 +251,13 @@
       <!-- Save Button -->
       <button type="submit" class="btn btn-primary ml-2">Save</button>
       <!-- Print Button -->
-      <a href="#" class="btn btn-success ml-2">Print</a>
+      <a href="" @click.prevent="printMe" class="btn btn-success ml-2">Print</a>
     </div>
 </form>
-
 @endsection
+
+
+
 
 @push('scripts')
 <script>

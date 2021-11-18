@@ -28,13 +28,56 @@
         </div>  
       </div>
 
+      <!-- Add New Discounts Button --> 
       <div class="form-row">
         <div class="form-group col-md-12">
-            <!-- Add New Customer Button -->
-            <button id="btn-add-article" class="btn btn-primary float-right">Add New Discounts</button>
-            <br/><br/>
+          <!-- Add New Discounts Button -->              
+          <button id="btn-add-discounts" type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#form">
+            Add New Discounts
+          </button>
+          <br/><br/>  
+        </div>
+
+        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="addDiscount" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header border-bottom-0">
+                <h5 class="modal-title" id="addDiscount">Enter Discount Information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <form>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="addServicesName">Service Name</label>
+                    <input type="text" class="form-control" id="addServicesName" aria-describedby="addServicesNameHelp" placeholder="Service Name">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="addMinimumQty">Minimum Qty</label>
+                    <input type="number" class="form-control" id="addMinimumQty" placeholder="Minimum Qty">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="addDiscount">Discount (%)</label>
+                    <input type="number" class="form-control" id="addDiscount" placeholder="Discount (%)">
+                  </div>
+                </div>
+
+                <div class="modal-footer border-top-0 d-flex justify-content-center">
+                    <button type="submit" class="btn btn-success">Submit</button>
+
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
+
+
+
 
       <table class="table table-bordered">
         <thead>
@@ -47,47 +90,48 @@
         </thead>
         <tbody>
           <tr>
-            <td>Assorted Regular</td>
-            <td>3</td>
-            <td>.10</td>
-            <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Assorted White</td>
-            <td>3</td>
-            <td>.10</td>
-            <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Bedsheet/Blankets</td>
-            <td>3</td>
-            <td>.10</td>
-            <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-            </td>
-          </tr>
-          <tr>
-            <td>Comforter Colored</td>
-            <td>2</td>
-            <td>.11</td>
-            <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
-            </td>
-          </tr>
-          <tr>
             <td>Comforter White</td>
             <td>2</td>
             <td>.11</td>
             <td>
-                <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+              <button id="btn-edit-discounts" type="button" class="btn btn-success" data-toggle="modal" data-target="#form1">
+                <i class="fas fa-edit"></i>
+              </button>          
+                <div class="modal fade" id="form1" tabindex="-1" role="dialog" aria-labelledby="editDiscount" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header border-bottom-0">
+                        <h5 class="modal-title" id="editDiscount">Edit Discount Information</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <form>
+                        <div class="modal-body">
+                          <div class="form-group">
+                            <label for="editServicesName">Service Name</label>
+                            <input type="text" class="form-control" id="editServicesName" aria-describedby="editServicesNameHelp" placeholder="Service Name">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="editMinimumQty">Minimum Qty</label>
+                            <input type="number" class="form-control" id="editMinimumQty" placeholder="Minimum Qty">
+                          </div>
+
+                          <div class="form-group">
+                            <label for="editDiscount">Discount (%)</label>
+                            <input type="number" class="form-control" id="editDiscount" placeholder="Discount (%)">
+                          </div>
+                        </div>
+
+                        <div class="modal-footer border-top-0 d-flex justify-content-center">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
                 <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
             </td>
           </tr>

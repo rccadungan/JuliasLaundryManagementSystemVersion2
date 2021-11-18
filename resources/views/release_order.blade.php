@@ -6,139 +6,153 @@
 
 @section('content')
 <div class="container mt-4">
-  <!-- Actual search box -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <form>
-        <!-- Release Order Section -->
-        <h5 class="font-weight-bold mb-3"> Release Order </h5>
+  <!-- Navigation Bar -->
+  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="float:right;">
+      <a class="nav-link active" id="v-pills-releaseOrder-tab" data-toggle="pill" href="#v-pills-releaseOrder" role="tab" aria-controls="v-pills-releaseOrder" aria-selected="true"> Release Order </a>
+      <a class="nav-link" id="v-pills-customerInformation-tab" data-toggle="pill" href="#v-pills-customerInformation" role="tab" aria-controls="v-pills-customerInformation" aria-selected="false"> Customer Information </a>
+      <a class="nav-link" id="v-pills-releaseOrderDetails-tab" data-toggle="pill" href="#v-pills-releaseOrderDetails" role="tab" aria-controls="v-pills-releaseOrderDetails" aria-selected="false"> Release Order Details</a>
+    </div>
 
-        <!-- SOF Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="sofNumber">SOF No.</label>
-            <select id="sofNumber" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+    <div class="tab-content" id="v-pills-tabContent">
+      <div class="tab-pane fade show active" id="v-pills-releaseOrder" role="tabpanel" aria-labelledby="v-pills-releaseOrder-tab">
+        <!-- Actual search box -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <form>
+              <!-- Release Order Section -->
+              <h5 class="font-weight-bold mb-3"> Release Order </h5>
+
+              <!-- SOF Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="sofNumber">SOF No.</label>
+                  <select id="sofNumber" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Customer Information Section -->
+              <h5 class="font-weight-bold mb-3"> Service Order Form Status </h5>
+
+              <!-- Amount Paid Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="amountPaid">Amount Paid</label>
+                  <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid">
+                </div>
+
+                <!-- Balance Field -->
+                <div class="form-group col-md-6">
+                  <label for="balance">Balance</label>
+                  <input type="text" class="form-control" id="balance" placeholder="Balance">
+                </div>
+              </div>
+            </form>
           </div>
-        </div>
+        </div> 
+      </div>
 
+      <div class="tab-pane fade show active" id="v-pills-customerInformation" role="tabpanel" aria-labelledby="v-pills-customerInformation-tab">
         <!-- Customer Information Section -->
-        <h5 class="font-weight-bold mb-3"> Service Order Form Status </h5>
+        <div class="card mb-4">
+          <div class="card-body">
+            <form>  
+              <!-- Customer Information Section -->
+              <h5 class="font-weight-bold mb-3"> Customer Information </h5>
 
-        <!-- Amount Paid Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="amountPaid">Amount Paid</label>
-            <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid">
-          </div>
+              <!-- Customer Number Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="customerNumber">Customer No.</label>
+                  <select id="customerNumber" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
 
-          <!-- Balance Field -->
-          <div class="form-group col-md-6">
-            <label for="balance">Balance</label>
-            <input type="text" class="form-control" id="balance" placeholder="Balance">
-          </div>
-        </div>
-      </form>
-    </div>
-  </div> 
+                <!-- Customer Name Field -->
+                <div class="form-group col-md-6">
+                  <label for="customerName">Customer Name</label>
+                  <select id="customerName" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
 
+              <!-- Customer Address Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="customerAddress" placeholder="Address" name="address" value="{{ $customers[0]->cust_add }}" readonly />
+                </div>
 
-  <!-- Customer Information Section -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <form>  
-        <!-- Customer Information Section -->
-        <h5 class="font-weight-bold mb-3"> Customer Information </h5>
+                <!-- Customer Address Field -->
+                <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
+                </div>
+              </div>
 
-        <!-- Customer Number Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="customerNumber">Customer No.</label>
-            <select id="customerNumber" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
+              <!-- Customer Contact Number Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="contactNumber">Contact Number</label>
+                  <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number" name="contact_number" value="{{ $customers[0]->cust_tel }}" readonly />
+                </div>
 
-          <!-- Customer Name Field -->
-          <div class="form-group col-md-6">
-            <label for="customerName">Customer Name</label>
-            <select id="customerName" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Customer Address Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-              <label for="address">Address</label>
-              <input type="text" class="form-control" id="customerAddress" placeholder="Address" name="address" value="{{ $customers[0]->cust_add }}" readonly />
-          </div>
-
-          <!-- Customer Address Field -->
-          <div class="form-group col-md-6">
-            <label for="email">Email</label>
-            <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
+                <!-- Customer VIP Status Field -->
+                <div class="form-group col-md-6">
+                  <label for="vip">VIP</label>
+                  <input type="text" class="form-control" id="vip" placeholder="vip" name="vip" value="{{ $customers[0]->is_vip == 1 ? 'Yes' : 'No' }}" readonly />
+                </div>
+              </div>
+            </form>
           </div>
         </div>
+      </div>
+      
+      <div class="tab-pane fade show active" id="v-pills-releaseOrderDetails" role="tabpanel" aria-labelledby="v-pills-releaseOrderDetails-tab">
+        <!-- Release Order Details Section -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <form>  
+              <h5 class="font-weight-bold mb-3"> Release Order Details </h5>
 
-        <!-- Customer Contact Number Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="contactNumber">Contact Number</label>
-            <input type="text" class="form-control" id="contactNumber" placeholder="Contact Number" name="contact_number" value="{{ $customers[0]->cust_tel }}" readonly />
-          </div>
+              <!-- Amount Field -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="amount">Amount Paid</label>
+                  <input type="text" class="form-control" id="amount" placeholder="Amount">
+                </div>
+              </div>
 
-          <!-- Customer VIP Status Field -->
-          <div class="form-group col-md-6">
-            <label for="vip">VIP</label>
-            <input type="text" class="form-control" id="vip" placeholder="vip" name="vip" value="{{ $customers[0]->is_vip == 1 ? 'Yes' : 'No' }}" readonly />
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
-
-
-  <!-- Release Order Details Section -->
-  <div class="card mb-4">
-    <div class="card-body">
-      <form>  
-        <h5 class="font-weight-bold mb-3"> Release Order Details </h5>
-
-        <!-- Amount Field -->
-        <div class="form-row">
-          <div class="form-group col-md-6">
-            <label for="amount">Amount Paid</label>
-            <input type="text" class="form-control" id="amount" placeholder="Amount">
+              <!-- Reason Field -->
+              <div class="form-row">
+                <div class="form-group col-md-12">
+                  <label for="reason">Received by</label>
+                  <select id="reason" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-
-        <!-- Reason Field -->
-        <div class="form-row">
-          <div class="form-group col-md-12">
-            <label for="reason">Received by</label>
-            <select id="reason" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
-          </div>
+      </div>
+      
+        <div class ="mb-2 float-right">
+          <!-- Cancel Button -->
+          <button type="submit" class="btn btn-danger">Cancel</button>
+          <!-- OK Button -->
+          <button type="submit" class="btn btn-primary ml-2">OK</button>
         </div>
-      </form>
+
     </div>
   </div>
-
-  <div class ="mb-2 float-right">
-    <!-- Cancel Button -->
-    <button type="submit" class="btn btn-danger">Cancel</button>
-    <!-- OK Button -->
-    <button type="submit" class="btn btn-primary ml-2">OK</button>
-  </div>
-  
 </div>
 @endsection
 

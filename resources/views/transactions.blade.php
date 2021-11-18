@@ -61,8 +61,7 @@
                                                 <td>132.00</td>
                                                 <td>Pickup date adjusted </td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    <button type="button" class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i></button>
                                                 </td>
                                                 
                                             </tr>
@@ -90,8 +89,7 @@
                                                 <td>132.00</td>
                                                 <td>Sarah Lahbati</td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    <button type="button" class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -174,8 +172,7 @@
                                                 <td>Sarah Lahbati</td>
                                                 <td>Return Deposit</td>
                                                 <td>
-                                                    <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+                                                    <button type="button" class="btn btn-success"><i class="fa fa-print" aria-hidden="true"></i></button>
                                                 </td>
                                             </tr>
                                         </tbody>
