@@ -247,11 +247,12 @@
 
     <div class ="mb-2 float-right">
       <!-- Cancel Button -->
-      <a href="{{ route('home.orders') }}" class="btn btn-danger">Cancel</a>
+      <a href="{{ route('home.orders') }}" class="btn btn-danger" >Cancel</a>
       <!-- Save Button -->
       <button type="submit" class="btn btn-primary ml-2">Save</button>
       <!-- Print Button -->
-      <a href="" @click.prevent="printMe" class="btn btn-success ml-2">Print</a>
+      <button onClick="window.print()" class="btn btn-primary ml-2">Print page</button>
+      <a href="/invoice" class="btn btn-success ml-2">Print</a>
     </div>
 </form>
 @endsection

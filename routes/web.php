@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use App\Http\Controllers\InvoiceController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrdersController;
@@ -81,4 +81,6 @@ Route::middleware(['auth'])->group(function() {
     Route::get('/transactions', [TransactionsController::class, 'transactions'])->name('transactions');
     Route::get('/manage_services', [ManageServicesController::class, 'manage_services'])->name('manage_services'); /* Redundant to Services controller */
     Route::get('/manage_discounts', [ManageDiscountsController::class, 'manage_discounts'])->name('manage_discounts');
+    Route::get('/invoice', [InvoiceController::class, 'index'])->name('invoice');
+    
 });

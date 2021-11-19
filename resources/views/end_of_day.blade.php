@@ -33,9 +33,9 @@
         <!-- Cash Breakdown Section -->
         <h5 class="font-weight-bold mb-3"> Cash Breakdown </h5>
 
-        <div class="row">
-          <div class="col-12">
-          <table class="table table-bordered">  
+        <div class="row" id="table">
+          <div class="col-12 table-editable">
+          <table class="table table-bordered table-responsive-md">  
             <thead>
             <tr>
                 <th scope="col">Bill/Coin</th>
@@ -46,78 +46,78 @@
               <tbody>
                 <tr>
                   <td>1,000.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>500.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>200.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>100.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>50.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>20.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>10.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>5.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>1.00</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>0.50</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>0.25</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>0.10</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>0.05</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td>CHECKS</td>
-                  <td>0</td>
-                  <td>0</td>
+                  <td contenteditable="true">0</td>
+                  <td contenteditable="true">0</td>
                 </tr>
                 <tr>
                   <td></td>
                   <td>Actual Cash Total</td>
-                  <td></td>
+                  <td contenteditable="true"></td>
                 </tr>
               </tbody>
             </table>
@@ -203,7 +203,7 @@
             </div>
         </div>
 
-        <button id="btn-add-article" class="btn btn-primary float-right">Add Expenses</button>
+        <button id="btn-add-expenses" class="btn btn-primary float-right">Add Expenses</button>
         <br/><br/>
 
         <div class="form-row">
@@ -211,9 +211,11 @@
             <label for="expensesType">Expenses Type</label>
               <select id="expenseType" class="form-control" name="expense_type">
                 <option selected>Choose...</option>
-                <option value="Soap">Soap</option>
-                <option value="Detergent Powder">Detergent Powder</option>
-                <option value="Fabric Conditioner">Fabric Conditioner</option>
+                @foreach($expenseTypes as $expenseType)
+                  <option value="{{ $expenseType->id }}">
+                    {{ $expenseType->expense_name }}
+                  </option>
+                @endforeach
               </select>
           </div>
 
@@ -236,8 +238,8 @@
               </thead>
                 <tbody>
                   <tr>
-                    <td>Detergent Powder</td>
-                    <td>150.00</td>
+                    <td></td>
+                    <td></td>
                   </tr>
                 </tbody>
             </table>
@@ -328,4 +330,24 @@
 
 @push('scripts')
 <!-- js here -->
+<script>
+  $(document).ready(function() {
+    let expenseType = JSON.parse( '{!! $expenseTypes !!}');
+    $('#btn-add-expenses').click(function(e) {
+      e.preventDefault();
+        
+        // let discount = totalServiceAmount * expenseType[0].disc_type.disc_pct;
+        // totalServiceAmount = totalServiceAmount - discount;
+        $('#article-table-body').append(`
+          <tr>
+            <td><input class="form-control" type="text" name="expense_type[]" readonly value="${expenseType[0].expense_name}" /></td>
+            <td><input class="form-control" type="text" name="amount[]" readonly value="${expenseType[0].amount}" /></td>
+          </tr>
+        `);
+        totalAmount += parseFloat(expenseType[0].amount - (expenseType[0].amount * expenseType[0].disc_type.disc_pct));
+        $('#totalAmount').val(totalAmount);
+      }
+    });
+  });  
+</script>
 @endpush

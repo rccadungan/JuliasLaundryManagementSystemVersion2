@@ -19,18 +19,26 @@
             <label for="serviceOrderNo">Service Order No.</label>
             <select id="serviceOrderNo" class="form-control">
               <option selected>Choose...</option>
-              <option>...</option>
+                @foreach($serviceOrders as $serviceOrder)
+                  <option value="{{ $serviceOrder->id }}">
+                  {{ $serviceOrder->id }}
+                  </option>
+                @endforeach
             </select>
           </div>
 
-          <!-- User ID Field -->
+          <!-- User Name Field -->
           <div class="form-group col-md-6">
-            <label for="userID">User ID</label>
-            <select id="userID" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
+            <label for="userName">User Name</label>
+            <select id="userName" class="form-control" name="user_name">
+              <option selected>Choose User...</option>
+              @foreach($users as $user)
+                <option value="{{ $user->user_name }}">
+                  {{ $user->user_name }}
+                </option>
+              @endforeach
             </select>
-          </div>
+          </div> 
         </div>
 
         <!-- Received Date Field -->
@@ -72,8 +80,15 @@
           <!-- Adjustment Details Field -->
           <div class="form-row">
             <div class="form-group col-md-12">
-              <label for="adjustmentDetails">Adjustment Details</label>
-              <textarea class="form-control" class="form-control" id="adjustmentDetails" placeholder="Adjustment Details" rows="5"></textarea>
+              <label for="reason">Adjustment Details</label>
+              <select id="reason" class="form-control">
+                <option selected>Choose...</option>
+                  @foreach($soAdjustments as $soAdjustment)
+                    <option value="{{ $soAdjustment->id }}">
+                    {{ $soAdjustment->adj_desc }}
+                    </option>
+                  @endforeach
+              </select>
             </div>
           </div>
         </div>

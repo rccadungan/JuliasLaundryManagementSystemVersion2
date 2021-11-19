@@ -15,50 +15,55 @@
 
     <div class="tab-content" id="v-pills-tabContent">
       <div class="tab-pane fade show active" id="v-pills-releaseOrder" role="tabpanel" aria-labelledby="v-pills-releaseOrder-tab">
-        <!-- Actual search box -->
+        <!-- Release Order Section -->
         <div class="card mb-4">
           <div class="card-body">
             <form>
-              <!-- Release Order Section -->
+              
               <h5 class="font-weight-bold mb-3"> Release Order </h5>
-
+              
               <!-- SOF Field -->
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="sofNumber">SOF No.</label>
                   <select id="sofNumber" class="form-control">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                      @foreach($serviceOrders as $serviceOrder)
+                        <option value="{{ $serviceOrder->id }}">
+                        {{ $serviceOrder->id }}
+                        </option>
+                      @endforeach
                   </select>
                 </div>
               </div>
 
-              <!-- Customer Information Section -->
+              <!-- Service Order Form Status Section -->
               <h5 class="font-weight-bold mb-3"> Service Order Form Status </h5>
 
               <!-- Amount Paid Field -->
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="amountPaid">Amount Paid</label>
-                  <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid">
+                  <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid" readonly/>
                 </div>
 
                 <!-- Balance Field -->
                 <div class="form-group col-md-6">
                   <label for="balance">Balance</label>
-                  <input type="text" class="form-control" id="balance" placeholder="Balance">
+                  <input type="text" class="form-control" id="balance" placeholder="Balance" readonly/>
                 </div>
               </div>
             </form>
           </div>
-        </div> 
+        </div>
       </div>
 
-      <div class="tab-pane fade show active" id="v-pills-customerInformation" role="tabpanel" aria-labelledby="v-pills-customerInformation-tab">
+
+      <div class="tab-pane fade" id="v-pills-customerInformation" role="tabpanel" aria-labelledby="v-pills-customerInformation-tab">
         <!-- Customer Information Section -->
         <div class="card mb-4">
           <div class="card-body">
-            <form>  
+            <form>
               <!-- Customer Information Section -->
               <h5 class="font-weight-bold mb-3"> Customer Information </h5>
 
@@ -68,17 +73,25 @@
                   <label for="customerNumber">Customer No.</label>
                   <select id="customerNumber" class="form-control">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    @foreach($customers as $customer)
+                      <option value="{{ $customer->id }}">
+                      {{ $customer->id }}
+                      </option>
+                    @endforeach
                   </select>
                 </div>
 
                 <!-- Customer Name Field -->
                 <div class="form-group col-md-6">
-                  <label for="customerName">Customer Name</label>
-                  <select id="customerName" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
-                  </select>
+                    <label for="customerName">Customer Name</label>
+                    <select id="customerName" class="form-control">
+                      <option selected>Choose...</option>
+                        @foreach($customers as $customer)
+                          <option value="{{ $customer->id }}">
+                          {{ $customer->cust_name }}
+                          </option>
+                        @endforeach
+                    </select>
                 </div>
               </div>
 
@@ -92,7 +105,7 @@
                 <!-- Customer Address Field -->
                 <div class="form-group col-md-6">
                   <label for="email">Email</label>
-                  <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->cust_add }}" readonly />
+                  <input type="text" class="form-control" id="customerEmail" placeholder="Email" name="email" value="{{ $customers[0]->email }}" readonly />
                 </div>
               </div>
 
@@ -113,29 +126,35 @@
           </div>
         </div>
       </div>
-      
-      <div class="tab-pane fade show active" id="v-pills-releaseOrderDetails" role="tabpanel" aria-labelledby="v-pills-releaseOrderDetails-tab">
-        <!-- Release Order Details Section -->
+
+
+      <div class="tab-pane fade" id="v-pills-releaseOrderDetails" role="tabpanel" aria-labelledby="v-pills-releaseOrderDetails-tab"> 
+        <!-- Credit Memo Details Section -->
         <div class="card mb-4">
           <div class="card-body">
-            <form>  
+            <form>
+              <!-- Credit Memo Details Section -->
               <h5 class="font-weight-bold mb-3"> Release Order Details </h5>
 
               <!-- Amount Field -->
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="amount">Amount Paid</label>
-                  <input type="text" class="form-control" id="amount" placeholder="Amount">
+                    <label for="amount">Amount Paid</label>
+                    <input type="text" class="form-control" id="amount" placeholder="Amount">
                 </div>
               </div>
 
-              <!-- Reason Field -->
+              <!-- Received By Field -->
               <div class="form-row">
-                <div class="form-group col-md-12">
-                  <label for="reason">Received by</label>
-                  <select id="reason" class="form-control">
+                <div class="form-group col-md-6">
+                  <label for="receivedBy">Received By</label>
+                  <select id="receivedBy" class="form-control" name="received_by">
                     <option selected>Choose...</option>
-                    <option>...</option>
+                    @foreach($users as $user)
+                      <option value="{{ $user->user_name }}">
+                        {{ $user->user_name }}
+                      </option>
+                    @endforeach
                   </select>
                 </div>
               </div>
@@ -143,17 +162,19 @@
           </div>
         </div>
       </div>
-      
-        <div class ="mb-2 float-right">
+
+      <div class="form-row float-right col-md-4">
+        <div class ="mb-2">
           <!-- Cancel Button -->
           <button type="submit" class="btn btn-danger">Cancel</button>
           <!-- OK Button -->
           <button type="submit" class="btn btn-primary ml-2">OK</button>
         </div>
+      </div>
 
-    </div>
-  </div>
-</div>
+    </div>   
+  </div> 
+</div> 
 @endsection
 
 @push('scripts')

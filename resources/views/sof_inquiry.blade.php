@@ -29,15 +29,15 @@
 
                     <!-- Service Order No. Field -->
                     <div class="form-group col-md-6">
-                    <label for="serviceOrderNo">Service Order No.</label>
-                    <select id="serviceOrderNo" class="form-control">
-                        <option selected>Choose...</option>
-                            @foreach($serviceOrders as $serviceOrder)
-                                <option value="{{ $serviceOrder->id }}">
-                                {{ $serviceOrder->id }}
-                                </option>
-                            @endforeach
-                    </select>
+                        <label for="serviceOrderNo">Service Order No.</label>
+                        <select id="serviceOrderNo" class="form-control">
+                            <option selected>Choose...</option>
+                                @foreach($serviceOrders as $serviceOrder)
+                                    <option value="{{ $serviceOrder->id }}">
+                                    {{ $serviceOrder->id }}
+                                    </option>
+                                @endforeach
+                        </select>
                     </div>
 
                     <div class="container">

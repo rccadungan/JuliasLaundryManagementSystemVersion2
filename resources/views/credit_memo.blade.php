@@ -44,13 +44,13 @@
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="amountPaid">Amount Paid</label>
-                  <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid">
+                  <input type="text" class="form-control" id="amountPaid" placeholder="Amount Paid" readonly/>
                 </div>
 
                 <!-- Balance Field -->
                 <div class="form-group col-md-6">
                   <label for="balance">Balance</label>
-                  <input type="text" class="form-control" id="balance" placeholder="Balance">
+                  <input type="text" class="form-control" id="balance" placeholder="Balance" readonly/>
                 </div>
               </div>
             </form>
@@ -70,15 +70,15 @@
               <!-- Customer Number Field -->
               <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="customerNumber">Customer No.</label>
-                    <select id="customerNumber" class="form-control">
-                      <option selected>Choose...</option>
-                      @foreach($customers as $customer)
-                        <option value="{{ $customer->id }}">
-                        {{ $customer->id }}
-                        </option>
-                      @endforeach
-                    </select>
+                  <label for="customerNumber">Customer No.</label>
+                  <select id="customerNumber" class="form-control">
+                    <option selected>Choose...</option>
+                    @foreach($customers as $customer)
+                      <option value="{{ $customer->id }}">
+                      {{ $customer->id }}
+                      </option>
+                    @endforeach
+                  </select> 
                 </div>
 
                 <!-- Customer Name Field -->

@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'email' => "cdrosalita@student.apc.edu.ph",
                 'email_verified_at' => Carbon::now(),
                 'password' => Hash::make("password123"),
-                'user_name' => "admin",
+                'user_name' => "Admin",
                 'user_level' => '1', // 1 = admin account : 2 = Girl accounts
                 'user_status' => '1', // 0 = Disabled : 1 = Enabled
                 'remember_token' => Str::random(60)

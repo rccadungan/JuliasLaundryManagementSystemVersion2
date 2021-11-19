@@ -69,10 +69,10 @@
 
                     <!-- Orders Menu -->
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.index') }}"><i class="fas fa-home mr-1" style="color: #e75480;"></i> Home</a>
+                        <a class="nav-link text-uppercase font-weight-bold" href="{{ route('home.index') }}"><i class="fas fa-home mr-1" style="color: #e75480;"></i> Home </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-uppercase font-weight-bold" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="far fa-clipboard" style="color: #e75480;"></i> Orders
                         </a>
                         <div class="dropdown-menu">
@@ -84,69 +84,73 @@
                         </div>
                     </li>
 
-                    @if (auth()->user()->user_level == 1)
+                    
                         <!-- Reports Menu -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link dropdown-toggle text-uppercase font-weight-bold" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-file-alt" style="color: #e75480;"></i> Reports
                             </a>
                             <div class="dropdown-menu">
                                 <!-- Daily Reports -->
                                 <a class="dropdown-item" href="{{ route('end_of_day') }}">Create End of Day Report</a> <!-- Not using Reports route-->
-                                <!-- Monthly Reports -->
-                                <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
-                                <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
-                                <a class="dropdown-item" href="{{ route('monthly_sales_by_item') }}">Monthly Sales by Item</a>
-                                <a class="dropdown-item" href="{{ route('monthly_expenses') }}">Monthly Expenses</a>
-                                <!-- Annual Reports -->
-                                <a class="dropdown-item" href="{{ route('annual_sales_summary_by_customer') }}">Annual Sales Summary by Customer</a>
-                                <a class="dropdown-item" href="{{ route('annual_sales_by_customer_month') }}">Annual Sales by Customer/Month</a>
-                                <a class="dropdown-item" href="{{ route('annual_expenses') }}">Annual Expenses</a>
-                                <a class="dropdown-item" href="{{ route('annual_list_of_credit_memo') }}">Annual List of Credit Memos</a>
-                                <a class="dropdown-item" href="{{ route('annual_list_of_cancelled_so') }}">Annual List of Cancelled SOs</a>
-                                <a class="dropdown-item" href="{{ route('annual_list_of_so_adjustments') }}">Annual List of SO Adjustments</a>
-                            
+                                @if (auth()->user()->user_level == 1)
+                                    <!-- Monthly Reports -->
+                                    <a class="dropdown-item" href="{{ route('monthly_sales_by_so') }}">Monthly Sales by SO</a>
+                                    <a class="dropdown-item" href="{{ route('monthly_sales_by_customer') }}">Monthly Sales by Customer</a>
+                                    <a class="dropdown-item" href="{{ route('monthly_sales_by_item') }}">Monthly Sales by Item</a>
+                                    <a class="dropdown-item" href="{{ route('monthly_expenses') }}">Monthly Expenses</a>
+                                    <!-- Annual Reports -->
+                                    <a class="dropdown-item" href="{{ route('annual_sales_summary_by_customer') }}">Annual Sales Summary by Customer</a>
+                                    <a class="dropdown-item" href="{{ route('annual_sales_by_customer_month') }}">Annual Sales by Customer/Month</a>
+                                    <a class="dropdown-item" href="{{ route('annual_expenses') }}">Annual Expenses</a>
+                                    <a class="dropdown-item" href="{{ route('annual_list_of_credit_memo') }}">Annual List of Credit Memos</a>
+                                    <a class="dropdown-item" href="{{ route('annual_list_of_cancelled_so') }}">Annual List of Cancelled SOs</a>
+                                    <a class="dropdown-item" href="{{ route('annual_list_of_so_adjustments') }}">Annual List of SO Adjustments</a>
+                                @endif
                             </div>
                         </li>
-                    @endif
-
-                    <!-- Customers Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-users" style="color: #e75480;"></i> Customers
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('manage_customers') }}">Manage Customers</a> <!-- Not using Customers route-->
-                            <a class="dropdown-item" href="{{ route('transactions') }}">View Transactions</a>                
-                        </div>
-                    </li>
-
-                    <!-- Services Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-tshirt" style="color: #e75480;"></i> Services
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{ route('manage_services') }}">Manage Services</a> <!-- Not using Services route-->
-                            <a class="dropdown-item" href="{{ route('manage_discounts') }}">Manage Discounts</a>               
-                        </div>
-                    </li>
-
-                    <!-- Inventory Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.inventory') }}"><i class="fas fa-columns" style="color: #e75480;"></i> Inventory </a>
-                    </li>
-
-                    <!-- Audit Trail Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.audit_trail') }}"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
-                    </li>
-
-                    <!-- Users Menu -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('home.users') }}"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
-                    </li>
                     
+                    @if (auth()->user()->user_level == 1)
+                        <!-- Customers Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase font-weight-bold" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-users" style="color: #e75480;"></i> Customers
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('manage_customers') }}">Manage Customers</a> <!-- Not using Customers route-->
+                                <a class="dropdown-item" href="{{ route('transactions') }}">View Transactions</a>                
+                            </div>
+                        </li>
+                    
+
+
+                        <!-- Services Menu -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase font-weight-bold" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-tshirt" style="color: #e75480;"></i> Services
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('manage_services') }}">Manage Services</a> <!-- Not using Services route-->
+                                <a class="dropdown-item" href="{{ route('manage_discounts') }}">Manage Discounts</a>               
+                            </div>
+                        </li>
+
+
+                        <!-- Inventory Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase font-weight-bold" href="{{ route('home.inventory') }}"><i class="fas fa-columns" style="color: #e75480;"></i> Inventory </a>
+                        </li>
+
+                        <!-- Audit Trail Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase font-weight-bold" href="{{ route('home.audit_trail') }}"><i class="fas fa-calculator" style="color: #e75480;"></i> Audit Trail </a>       
+                        </li>
+
+                        <!-- Users Menu -->
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase font-weight-bold" href="{{ route('home.users') }}"><i class="far fa-id-badge" style="color: #e75480;"></i> Users </a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </nav>
